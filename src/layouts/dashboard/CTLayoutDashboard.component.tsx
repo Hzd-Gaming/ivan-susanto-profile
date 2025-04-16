@@ -1,12 +1,8 @@
-import { useMemo } from 'react';
-
-import { Breadcrumb, Button, Layout } from 'antd';
+import { Button, Layout } from 'antd';
 import cx from 'classnames';
-import { useLocation } from 'react-router-dom';
 
 import { CTSeoMeta } from '@/components';
 import { useComponentStore } from '@/stores/common';
-import { capitalize } from '@/utils/string.utils';
 
 import { CTLayoutDashboardProps } from './CTLayoutDashboard.type';
 import {
@@ -19,67 +15,30 @@ import './CTLayoutDashboard.style.scss';
 
 const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   actionButtonProps,
-  breadcrumbProps,
   children,
   className,
   contentProps,
   meta,
-  titlePage,
   ...rest
 }) => {
-  const { pathname } = useLocation();
-
-  const paths = useMemo(() => pathname.split('/'), [pathname]);
-
-  const isSidebarCollapsed = useComponentStore(
-    (state) => state.isSidebarCollapsed
-  );
-
-  const makeTitle = useMemo(() => {
-    if (!titlePage) return null;
-    if (typeof titlePage === 'string')
-      return (
-        <h1 className="ct_layout_dashboard__content__header__title">
-          {titlePage}
-        </h1>
-      );
-
-    return titlePage;
-  }, [titlePage]);
+  const { isDarkMode } = useComponentStore((state) => state);
 
   return (
     <Layout className={cx('ct_layout_dashboard', className)} {...rest}>
       <CTSeoMeta meta={meta} />
 
       <CTLayoutDashboardHeader />
-      <Layout hasSider>
-        <CTLayoutDashboardSidebar />
-        <Layout
-          className={cx(
-            'ct_layout_dashboard__inner',
-            !isSidebarCollapsed && 'ct_layout_dashboard__inner--expanded'
-          )}>
-          {!breadcrumbProps?.isHidden && (
-            <Breadcrumb
-              className={cx(
-                'ct_layout_dashboard__breadcrumb',
-                breadcrumbProps?.className
-              )}
-              items={paths.map((path) => ({
-                title: capitalize(path || 'home'),
-              }))}
-              {...breadcrumbProps}
-            />
-          )}
-
+      <CTLayoutDashboardSidebar />
+      <Layout>
+        <Layout className={cx('ct_layout_dashboard__inner')}>
           <Layout.Content
             className={cx(
               'ct_layout_dashboard__content',
+              isDarkMode && 'ct_layout_dashboard__content--dark',
               contentProps?.className
             )}
             {...contentProps}>
             <div className="ct_layout_dashboard__content__header">
-              {makeTitle}
               {Array.isArray(actionButtonProps) &&
                 actionButtonProps?.length > 0 && (
                   <>

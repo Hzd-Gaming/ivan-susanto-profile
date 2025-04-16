@@ -16,3 +16,14 @@ export const capitalize = (
   if (isFirstCharOnly) return capitalizeFirstChar(value);
   return value?.split(split)?.map(capitalizeFirstChar)?.join(join);
 };
+
+export const formatEllipsis: (
+  fullTextStr: string,
+  maxChar?: number
+) => string = (fullTextStr, maxChar = 30) => {
+  if (fullTextStr?.length <= maxChar) {
+    return fullTextStr;
+  }
+
+  return `${fullTextStr?.substr(0, maxChar)}...`;
+};

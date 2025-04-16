@@ -5,18 +5,26 @@ import { kStorageKey } from '@/constants/common';
 import { UseComponentStoreProps } from './component.type';
 
 const useComponentStore = create<UseComponentStoreProps>((set) => ({
-  // #region Sidebar Collapsible
-  isSidebarCollapsed:
-    JSON.parse(
-      localStorage?.getItem(kStorageKey.SidebarCollapsible) || 'null'
-    ) || false,
-  updateIsSidebarCollapsed: (value) => {
+  isDarkMode:
+    JSON.parse(localStorage?.getItem(kStorageKey.DarkMode) || 'null') || true,
+  isSidebarOpen: false,
+  sidebarType: 'filter',
+  updateIsSidebarOpen: (value) => {
     set((state) => {
-      localStorage.setItem(kStorageKey.SidebarCollapsible, value?.toString());
-      return { ...state, isSidebarCollapsed: value };
+      return { ...state, isSidebarOpen: value };
     });
   },
-  // #endregion
+  updateIsDarkMode: (value) => {
+    set((state) => {
+      localStorage.setItem(kStorageKey.DarkMode, value?.toString());
+      return { ...state, isDarkMode: value };
+    });
+  },
+  updateSidebarType(value) {
+    set((state) => {
+      return { ...state, sidebarType: value };
+    });
+  },
 }));
 
 export default useComponentStore;

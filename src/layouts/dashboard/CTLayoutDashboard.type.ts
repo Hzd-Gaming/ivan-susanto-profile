@@ -1,4 +1,4 @@
-import { BreadcrumbProps, ButtonProps, LayoutProps } from 'antd';
+import { ButtonProps, LayoutProps } from 'antd';
 
 import { CTSeoMetaProps } from '@/components';
 
@@ -7,18 +7,6 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    * Properties for action buttons on the right page besides the title page.
    */
   actionButtonProps?: ButtonProps[];
-  /**
-   * Properties for breadcrumb. Usually for changing style through className or inline style.
-   */
-  breadcrumbProps?: BreadcrumbProps & {
-    /**
-     * For hiding the breadcrumb if unneeded.
-     *
-     * @default
-     * false
-     */
-    isHidden?: boolean;
-  };
   /**
    * Properties for base inner content layout. Usually for changing padding, marging or even background color
    * through className or inline style.

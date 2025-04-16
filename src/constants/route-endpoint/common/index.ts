@@ -1,5 +1,5 @@
 enum RouteEndpointsCommon {
-  HOME = '/',
+  HOME = '/ivan-susanto-profile',
   WILDCARD = '*',
   ERROR_404 = '/404',
   ERROR_500 = '/500',

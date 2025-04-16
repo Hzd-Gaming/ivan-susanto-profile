@@ -6,24 +6,18 @@
   min-height: 100dvh;
   background-color: kColor.$kColorBackground--dashboard;
 
-  &__inner {
-    margin-left: 80px;
-    transition: margin-left 0.2s ease;
-
-    &--expanded {
-      margin-left: 240px;
-    }
-  }
-
   &__content {
     background-color: kColor.$kColorBackground--dashboard;
+
+    &--dark {
+      background-color: kColor.$kColorNeutral--4;
+    }
     @extend .p--3;
 
     &__header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @extend .mb--3;
 
       &__button {
         width: 100%;
