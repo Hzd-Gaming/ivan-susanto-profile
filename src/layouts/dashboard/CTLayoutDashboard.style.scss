@@ -3,16 +3,12 @@
 @use '@/styles/scss/variables/colors' as kColor;
 
 .ct_layout_dashboard {
-  min-height: 100dvh;
   background-color: kColor.$kColorBackground--dashboard;
-
   &__content {
-    background-color: kColor.$kColorBackground--dashboard;
-
-    &--dark {
-      background-color: kColor.$kColorNeutral--4;
-    }
-    @extend .p--3;
+    height: 100dvh;
+    background-image: url('/src/assets/images/background-profile.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__header {
       display: flex;

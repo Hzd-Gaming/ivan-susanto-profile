@@ -45,11 +45,11 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
 
   const parsed = useMemo(() => paramParsify(location?.search), [location]);
   const {
-    isDarkMode,
+    isBackgroundMusicMuted,
     isSidebarOpen,
     sidebarType,
     updateIsSidebarOpen,
-    updateIsDarkMode,
+    updateIsBackgroundMusicMuted,
   } = useComponentStore((state) => state);
 
   const handleSortByName = useCallback(
@@ -100,8 +100,8 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
   }, [location?.pathname, location?.state, navigate, parsed]);
 
   const handleSwitchDarkMode = useCallback(() => {
-    updateIsDarkMode(!isDarkMode);
-  }, [isDarkMode, updateIsDarkMode]);
+    updateIsBackgroundMusicMuted(!isBackgroundMusicMuted);
+  }, [isBackgroundMusicMuted, updateIsBackgroundMusicMuted]);
 
   const sidebarContent = useMemo(() => {
     switch (sidebarType) {
@@ -134,7 +134,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
                 value={(parsed?.category || 'all') as string}
                 popupClassName={cx(
                   'ct_layout_dashboard__sidebar__select_popup',
-                  isDarkMode &&
+                  isBackgroundMusicMuted &&
                     'ct_layout_dashboard__sidebar__select_popup--dark'
                 )}
               />
@@ -152,7 +152,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
                 value={(parsed?.search_by || 'name') as string}
                 popupClassName={cx(
                   'ct_layout_dashboard__sidebar__select_popup',
-                  isDarkMode &&
+                  isBackgroundMusicMuted &&
                     'ct_layout_dashboard__sidebar__select_popup--dark'
                 )}
               />
@@ -301,7 +301,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
     handleOnSelectCategory,
     handleOnSelectSearchCategory,
     handleSortByName,
-    isDarkMode,
+    isBackgroundMusicMuted,
     parsed,
     sidebarType,
   ]);
@@ -309,7 +309,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
     <Drawer
       className={cx(
         'ct_layout_dashboard__sidebar',
-        isDarkMode && 'ct_layout_dashboard__sidebar--dark'
+        isBackgroundMusicMuted && 'ct_layout_dashboard__sidebar--dark'
       )}
       title={
         <Row justify="space-between" align="middle">
@@ -322,7 +322,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
             <Switch
               className="ml--2"
               onChange={handleSwitchDarkMode}
-              defaultChecked={isDarkMode}
+              defaultChecked={isBackgroundMusicMuted}
               checkedChildren={<MoonOutlined />}
               unCheckedChildren={<SunOutlined />}
             />

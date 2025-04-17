@@ -8,14 +8,17 @@ import { useComponentStore } from '@/stores/common';
 import './404.style.scss';
 
 const Error404: React.FC = () => {
-  const { isDarkMode } = useComponentStore((state) => state);
+  const { isBackgroundMusicMuted } = useComponentStore((state) => state);
   return (
     <main
-      className={cx('error_404_page', isDarkMode && 'error_404_page--dark')}>
+      className={cx(
+        'error_404_page',
+        isBackgroundMusicMuted && 'error_404_page--dark'
+      )}>
       <Result
         className={cx(
           'error_404_page__illust',
-          isDarkMode && 'error_404_page__illust--dark'
+          isBackgroundMusicMuted && 'error_404_page__illust--dark'
         )}
         status="404"
         title="Oops..."

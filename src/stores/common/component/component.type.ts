@@ -1,8 +1,8 @@
 export interface UseComponentStoreProps {
-  isDarkMode: boolean;
+  isBackgroundMusicMuted: boolean;
   isSidebarOpen: boolean;
   sidebarType: 'filter' | 'info';
-  updateIsDarkMode: (value: boolean) => void;
+  updateIsBackgroundMusicMuted: (value: boolean) => void;
   updateIsSidebarOpen: (value: boolean) => void;
   updateSidebarType: (value: 'filter' | 'info') => void;
 }

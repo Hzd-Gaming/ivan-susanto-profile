@@ -1,25 +1,23 @@
 @use '@/styles/scss/utils/padding';
 @use '@/styles/scss/variables/colors' as kColor;
 
-$header_sidebar_color: kColor.$kColorPrimary--0;
+$header_sidebar_color: kColor.$kColorPrimary--6;
 
 .ct_layout_dashboard__header {
-  align-items: center;
-  background-color: $header_sidebar_color;
-  border-bottom: thin solid kColor.$kColorNeutral--1;
-  box-shadow: kColor.$kColorNeutral--2 0px 8px 24px;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  color: kColor.$kColorDanger--main;
+  align-items: center;
+  background-color: $header_sidebar_color;
+  border-bottom: 3.5px solid kColor.$kColorPrimary--3;
+  opacity: 95%;
 
-  // handle transition when switched
-  -webkit-transition: background-color 0.7s ease;
-  -moz-transition: background-color 0.7s ease;
-  -o-transition: background-color 0.7s ease;
-  transition: background-color 0.7s ease;
+  &__title {
+    color: kColor.$kColorDanger--0;
+    font-size: 26px;
+  }
 
   &--dark {
     box-shadow: kColor.$kColorPrimary--main 0px 8px 24px;

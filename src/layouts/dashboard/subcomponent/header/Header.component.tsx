@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
-import { FilterTwoTone, QuestionCircleTwoTone } from '@ant-design/icons';
+import { CloseOutlined, FilterTwoTone, SoundOutlined } from '@ant-design/icons';
 import { Layout, Space } from 'antd';
-import cx from 'classnames';
+import { useMediaQuery } from 'usehooks-ts';
 
 import './Header.style.scss';
 
@@ -13,38 +13,53 @@ const { Header } = Layout;
 
 const CTLayoutDashboardHeader: React.FC = () => {
   const headerRef = useRef<HTMLElement>(null);
-  const { isDarkMode, updateIsSidebarOpen, updateSidebarType } =
-    useComponentStore((state) => state);
+
+  const isDesktop = useMediaQuery('(min-width: 769px)');
+
+  const {
+    isBackgroundMusicMuted,
+    updateIsSidebarOpen,
+    updateSidebarType,
+    updateIsBackgroundMusicMuted,
+  } = useComponentStore((state) => state);
 
   return (
-    <Header
-      className={cx(
-        'ct_layout_dashboard__header',
-        isDarkMode && 'ct_layout_dashboard__header--dark'
-      )}
-      ref={headerRef}>
-      <FilterTwoTone
-        className="mr--2"
-        style={{ fontSize: 18 }}
-        twoToneColor={isDarkMode ? kColorPrimary[3] : kColorNeutral[5]}
-        onClick={() => {
-          updateSidebarType('filter');
-          updateIsSidebarOpen(true);
-        }}
-      />
-      <Space align="center">
-        <h3>Profile</h3>
-      </Space>
+    <Header className="ct_layout_dashboard__header" ref={headerRef}>
+      <div>
+        {!isDesktop && (
+          <FilterTwoTone
+            className="mr--2"
+            style={{ fontSize: 18 }}
+            twoToneColor={
+              isBackgroundMusicMuted ? kColorPrimary[3] : kColorNeutral[5]
+            }
+            onClick={() => {
+              updateSidebarType('filter');
+              updateIsSidebarOpen(true);
+            }}
+          />
+        )}
+      </div>
 
-      <QuestionCircleTwoTone
+      <p className="ct_layout_dashboard__header__title">PROFILE</p>
+
+      <div
+        onClick={() => updateIsBackgroundMusicMuted(!isBackgroundMusicMuted)}
         className="ml--2"
-        style={{ fontSize: 18 }}
-        twoToneColor={isDarkMode ? kColorPrimary[3] : kColorPrimary[5]}
-        onClick={() => {
-          updateSidebarType('info');
-          updateIsSidebarOpen(true);
-        }}
-      />
+        style={{ cursor: 'pointer' }}>
+        {isBackgroundMusicMuted ? (
+          <Space size={0} align="center">
+            <SoundOutlined style={{ fontSize: 24 }} />
+            <CloseOutlined
+              style={{
+                paddingBottom: 30,
+              }}
+            />
+          </Space>
+        ) : (
+          <SoundOutlined style={{ fontSize: 24 }} />
+        )}
+      </div>
     </Header>
   );
 };

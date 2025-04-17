@@ -1,5 +1,6 @@
-import { Button, Layout } from 'antd';
+import { Layout } from 'antd';
 import cx from 'classnames';
+import { useSpring, animated } from 'react-spring';
 
 import { CTSeoMeta } from '@/components';
 import { useComponentStore } from '@/stores/common';
@@ -14,60 +15,41 @@ import '@/styles/scss/utils/_margin.scss';
 import './CTLayoutDashboard.style.scss';
 
 const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
-  actionButtonProps,
   children,
   className,
   contentProps,
   meta,
   ...rest
 }) => {
-  const { isDarkMode } = useComponentStore((state) => state);
+  const { isBackgroundMusicMuted } = useComponentStore((state) => state);
+
+  // handle animation onMount
+  const animationOnMountWholeLayout = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 200,
+  });
+  // end of region
 
   return (
-    <Layout className={cx('ct_layout_dashboard', className)} {...rest}>
+    <div className={cx('ct_layout_dashboard', className)} {...rest}>
       <CTSeoMeta meta={meta} />
-
-      <CTLayoutDashboardHeader />
-      <CTLayoutDashboardSidebar />
-      <Layout>
+      <animated.div style={animationOnMountWholeLayout}>
         <Layout className={cx('ct_layout_dashboard__inner')}>
           <Layout.Content
             className={cx(
               'ct_layout_dashboard__content',
-              isDarkMode && 'ct_layout_dashboard__content--dark',
+              isBackgroundMusicMuted && 'ct_layout_dashboard__content--dark',
               contentProps?.className
             )}
             {...contentProps}>
-            <div className="ct_layout_dashboard__content__header">
-              {Array.isArray(actionButtonProps) &&
-                actionButtonProps?.length > 0 && (
-                  <>
-                    <span style={{ flex: 'auto' }} />
-                    {actionButtonProps?.map((prop, idx) => (
-                      <Button
-                        key={idx}
-                        className={cx(
-                          'ct_layout_dashboard__content__header__button',
-                          prop?.className,
-                          idx < actionButtonProps?.length - 1 && 'mr--2'
-                        )}
-                        style={{
-                          maxWidth: !prop?.block ? 120 : '',
-                          ...prop?.style,
-                        }}
-                        type={prop?.type || 'primary'}
-                        {...prop}>
-                        {prop?.children}
-                      </Button>
-                    ))}
-                  </>
-                )}
-            </div>
-            {children}
+            <CTLayoutDashboardHeader />
+            <CTLayoutDashboardSidebar />
+            <div className="p--3">{children}</div>
           </Layout.Content>
         </Layout>
-      </Layout>
-    </Layout>
+      </animated.div>
+    </div>
   );
 };
 
