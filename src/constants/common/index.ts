@@ -1,2 +1,2 @@
 export * from './storage.constant';
-export * from './dataInput.constant';
+export * from './options.constant';

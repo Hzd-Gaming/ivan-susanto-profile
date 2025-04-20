@@ -12,6 +12,7 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    * through className or inline style.
    */
   contentProps?: React.HTMLAttributes<HTMLElement>;
+  extra?: React.ReactNode;
   /**
    * Title for your page. The title is customizable by using React Node or simply using a string.
    *
@@ -21,4 +22,5 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    * </CTLayoutDashboard>
    */
   titlePage?: string | React.ReactNode;
+  showSidebar?: boolean;
 }

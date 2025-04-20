@@ -1,0 +1,54 @@
+import { useCallback } from 'react';
+
+import { Space } from 'antd';
+import cx from 'classnames';
+import { useNavigate } from 'react-router-dom';
+
+import { CTMenuListProps } from './CTMenuList.types';
+
+import './CTMenuList.style.scss';
+
+const CTMenuList: React.FC<CTMenuListProps> = ({ clickable, list, title }) => {
+  const navigate = useNavigate();
+
+  const handleOnClickMenu = useCallback(
+    (path: string | undefined) => {
+      if (path && clickable) {
+        navigate(path);
+      }
+    },
+    [clickable, navigate]
+  );
+
+  return (
+    <div className="ct_menu_list">
+      <div className="ct_menu_list__title_wrapper">
+        <div className="ct_menu_list__title_wrapper__title">{title}</div>
+      </div>
+      {list?.map(({ key, label, path }) => (
+        <div key={key} className="ct_menu_list__menu_wrapper">
+          <div className="ct_menu_list__menu_wrapper__outer">
+            <div
+              onClick={() => handleOnClickMenu(path)}
+              className={cx(
+                'ct_menu_list__menu_wrapper__inner',
+                !clickable && 'ct_menu_list__menu_wrapper__inner--type2'
+              )}>
+              <Space
+                size={0}
+                className="ct_menu_list__menu_wrapper__inner__label_wrapper"
+                style={{ width: '100%' }}>
+                {label}
+                {clickable && <div className="hover_effect" />}
+              </Space>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  return <></>;
+};
+
+export default CTMenuList;

@@ -1,0 +1,132 @@
+@use '@/styles/scss/utils/padding';
+@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/utils/borderRadius';
+
+$opacity_title: 90%;
+$opacity: 80%;
+
+.home_page {
+  .title_wrapper {
+    position: relative;
+    cursor: pointer;
+    padding: 6px 20px;
+    width: 100%;
+    background-image: linear-gradient(
+      0.25turn,
+      kColor.$kColorNeutral--4,
+      kColor.$kColorNeutral--5
+    );
+    opacity: $opacity_title;
+    font-size: 1rem;
+
+    .title {
+      color: kColor.$kColorDanger--0;
+    }
+
+    // triangular on xAxis side
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      width: 0px;
+      height: 0px;
+      border-top: 1.125rem solid transparent;
+      border-bottom: 0.875rem solid transparent;
+      opacity: $opacity;
+    }
+    &:before {
+      right: 100%;
+      border-right: 18px solid kColor.$kColorNeutral--4;
+    }
+    &:after {
+      left: 100%;
+      border-left: 18px solid kColor.$kColorNeutral--5;
+    }
+    // end of triangular on xAxis side
+  }
+
+  &__profile_img {
+    object-fit: cover;
+  }
+
+  &__profile_bio {
+    background-image: linear-gradient(
+      0.25turn,
+      kColor.$kColorNeutral--4,
+      kColor.$kColorNeutral--5,
+      kColor.$kColorNeutral--4
+    );
+    opacity: $opacity;
+    text-align: justify;
+    text-justify: inter-word;
+    @extend .py--2;
+    @extend .px--4;
+    @extend .radius--1;
+  }
+
+  &__profile_stat {
+    background-image: linear-gradient(
+      kColor.$kColorNeutral--4,
+      kColor.$kColorPrimary--2
+    );
+    opacity: $opacity;
+    @extend .pt--1;
+    @extend .pb--2;
+    @extend .px--4;
+    @extend .radius--1;
+
+    &__title {
+      text-align: center;
+      font-size: 1.125rem;
+
+      &__border_bottom {
+        position: relative;
+        padding: 0.5px;
+        background-color: kColor.$kColorNeutral--main;
+
+        // triangular on xAxis side
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: -1.5px;
+          width: 0px;
+          height: 0px;
+          border-top: 0.125rem solid transparent;
+          border-bottom: 0.125rem solid transparent;
+          opacity: $opacity;
+        }
+        &:before {
+          right: 100%;
+          border-right: 18px solid kColor.$kColorNeutral--main;
+        }
+        &:after {
+          left: 100%;
+          border-left: 18px solid kColor.$kColorNeutral--main;
+        }
+        // end of triangular on xAxis side
+      }
+    }
+
+    &__desc {
+      &__job_value {
+        font-size: 1rem;
+        color: kColor.$kColorDanger--0;
+      }
+
+      &__col_left_container {
+        border-right: 0.125rem solid kColor.$kColorNeutral--2;
+      }
+
+      &__scrollable_value_container {
+        max-height: 10dvh;
+        overflow: scroll;
+      }
+
+      &__scrollable_value {
+        color: kColor.$kColorPrimary--main;
+      }
+    }
+  }
+}

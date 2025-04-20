@@ -1,4 +1,3 @@
-// TODO: Optimize the navigations
 import { useEffect } from 'react';
 
 import { ConfigProvider } from 'antd';
@@ -28,6 +27,8 @@ function App() {
   return (
     <HelmetProvider>
       <ConfigProvider theme={antdTheme}>
+        {/* Audio Management */}
+
         {/* Background Music */}
         <audio
           id="background_music"
@@ -36,7 +37,9 @@ function App() {
           loop
           style={{ display: 'none' }}
         />
+        {/* End of Background Music */}
 
+        {/* End of Audio Management */}
         {/* Route */}
         <RouterProvider router={router} />
       </ConfigProvider>

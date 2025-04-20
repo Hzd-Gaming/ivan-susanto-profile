@@ -5,10 +5,15 @@ import { kStorageKey } from '@/constants/common';
 import { UseComponentStoreProps } from './component.type';
 
 const useComponentStore = create<UseComponentStoreProps>((set) => ({
-  isBackgroundMusicMuted:
-    JSON.parse(localStorage?.getItem(kStorageKey.DarkMode) || 'null') || true,
+  footerDescription: '',
+  isBackgroundMusicMuted: true,
   isSidebarOpen: false,
   sidebarType: 'filter',
+  updateFooterDescription(value) {
+    set((state) => {
+      return { ...state, footerDescription: value };
+    });
+  },
   updateIsSidebarOpen: (value) => {
     set((state) => {
       return { ...state, isSidebarOpen: value };

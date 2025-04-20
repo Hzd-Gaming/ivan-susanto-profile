@@ -5,7 +5,7 @@
 .ct_layout_dashboard {
   background-color: kColor.$kColorBackground--dashboard;
   &__content {
-    height: 100dvh;
+    min-height: 100dvh;
     background-image: url('/src/assets/images/background-profile.gif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,16 +19,5 @@
         width: 100%;
       }
     }
-  }
-
-  &__breadcrumb {
-    background-color: kColor.$kColorBackground--dashboard;
-    @extend .pt--3;
-    @extend .px--3;
-  }
-
-  &__root_skeleton {
-    display: flex !important;
-    align-items: center;
   }
 }

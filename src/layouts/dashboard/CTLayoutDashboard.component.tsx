@@ -3,13 +3,9 @@ import cx from 'classnames';
 import { useSpring, animated } from 'react-spring';
 
 import { CTSeoMeta } from '@/components';
-import { useComponentStore } from '@/stores/common';
 
 import { CTLayoutDashboardProps } from './CTLayoutDashboard.type';
-import {
-  CTLayoutDashboardHeader,
-  CTLayoutDashboardSidebar,
-} from './subcomponent';
+import { CTLayoutDashboardHeader } from './subcomponent';
 
 import '@/styles/scss/utils/_margin.scss';
 import './CTLayoutDashboard.style.scss';
@@ -21,8 +17,6 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   meta,
   ...rest
 }) => {
-  const { isBackgroundMusicMuted } = useComponentStore((state) => state);
-
   // handle animation onMount
   const animationOnMountWholeLayout = useSpring({
     from: { opacity: 0 },
@@ -37,15 +31,14 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
       <animated.div style={animationOnMountWholeLayout}>
         <Layout className={cx('ct_layout_dashboard__inner')}>
           <Layout.Content
-            className={cx(
-              'ct_layout_dashboard__content',
-              isBackgroundMusicMuted && 'ct_layout_dashboard__content--dark',
-              contentProps?.className
-            )}
+            className="ct_layout_dashboard__content"
             {...contentProps}>
             <CTLayoutDashboardHeader />
-            <CTLayoutDashboardSidebar />
-            <div className="p--3">{children}</div>
+            <div
+              className="px--4 py--3"
+              style={{ maxHeight: '90dvh', overflow: 'scroll' }}>
+              {children}
+            </div>
           </Layout.Content>
         </Layout>
       </animated.div>
