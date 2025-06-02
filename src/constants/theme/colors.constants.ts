@@ -7,59 +7,62 @@
 // _colors.scss` too to prevent confusion.
 
 /**
- * ![#1069B8](https://placehold.co/2x2/1069B8/1069B8.webp)
- * ![#E7F0F8](https://placehold.co/2x2/E7F0F8/E7F0F8.webp)
- * ![#AFCDE7](https://placehold.co/2x2/AFCDE7/AFCDE7.webp)
- * ![#609BD0](https://placehold.co/2x2/609BD0/609BD0.webp)
- * ![#0D5799](https://placehold.co/2x2/0D5799/0D5799.webp)
- * ![#0B467B](https://placehold.co/2x2/0B467B/0B467B.webp)
- * ![#08355C](https://placehold.co/2x2/08355C/08355C.webp)
+ * ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp)
+ * ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp)
+ * ![#4d78df](https://placehold.co/2x2/4d78df/4d78df.webp)
+ * ![#223da8](https://placehold.co/2x2/223da8/223da8.webp)
+ * ![#4d5f97](https://placehold.co/2x2/4d5f97/4d5f97.webp)
+ * ![#424a5d](https://placehold.co/2x2/424a5d/424a5d.webp)
+ * ![#29396a](https://placehold.co/2x2/29396a/29396a.webp)
+ * ![#151c30](https://placehold.co/2x2/151c30/151c30.webp)
  */
 export const kColorPrimary = {
-  /** ![#1069B8](https://placehold.co/2x2/1069B8/1069B8.webp) */
-  main: '#1069B8',
-  /** ![#E7F0F8](https://placehold.co/2x2/E7F0F8/E7F0F8.webp) */
-  '0': '#E7F0F8',
-  /** ![#AFCDE7](https://placehold.co/2x2/AFCDE7/AFCDE7.webp) */
-  '1': '#AFCDE7',
-  /** ![#609BD0](https://placehold.co/2x2/609BD0/609BD0.webp) */
-  '2': '#609BD0',
-  /** ![#0D5799](https://placehold.co/2x2/0D5799/0D5799.webp) */
-  '3': '#0D5799',
-  /** ![#0B467B](https://placehold.co/2x2/0B467B/0B467B.webp) */
-  '4': '#0B467B',
-  /** ![#08355C](https://placehold.co/2x2/08355C/08355C.webp) */
-  '5': '#08355C',
+  /** ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp) */
+  main: '#10eac6',
+  /** ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp) */
+  '0': '#60a2d4',
+  /** ![#4d78df](https://placehold.co/2x2/4d78df/4d78df.webp) */
+  '1': '#4d78df',
+  /** ![#223da8](https://placehold.co/2x2/223da8/223da8.webp) */
+  '2': '#223da8',
+  /** ![#4d5f97](https://placehold.co/2x2/4d5f97/4d5f97.webp) */
+  '3': '#4d5f97',
+  /** ![#424a5d](https://placehold.co/2x2/424a5d/424a5d.webp) */
+  '4': '#424a5d',
+  /** ![#29396a](https://placehold.co/2x2/29396a/29396a.webp) */
+  '5': '#29396a',
+  /** ![#151c30](https://placehold.co/2x2/151c30/151c30.webp) */
+  '6': '#151c30',
 } as const;
 
 /**
- * ![#EE5046](https://placehold.co/2x2/EE5046/EE5046.webp)
- * ![#FFF3F2](https://placehold.co/2x2/FFF3F2/FFF3F2.webp)
- * ![#FCDCDA](https://placehold.co/2x2/FCDCDA/FCDCDA.webp)
- * ![#F8B9B5](https://placehold.co/2x2/F8B9B5/F8B9B5.webp)
- * ![#F1736B](https://placehold.co/2x2/F1736B/F1736B.webp)
- * ![#CD4239](https://placehold.co/2x2/CD4239/CD4239.webp)
- * ![#AC342D](https://placehold.co/2x2/AC342D/AC342D.webp)
+ * ![#ef1313](https://placehold.co/2x2/ef1313/ef1313.webp)
+ * ![#f4db35](https://placehold.co/2x2/f4db35/f4db35.webp)
+ * ![#ee9d2a](https://placehold.co/2x2/ee9d2a/ee9d2a.webp)
+ * ![#aa3000](https://placehold.co/2x2/aa3000/aa3000.webp)
+ * ![#d7ceba](https://placehold.co/2x2/d7ceba/d7ceba.webp)
+ * ![#bc836f](https://placehold.co/2x2/bc836f/bc836f.webp)
+ * ![#786a5f](https://placehold.co/2x2/786a5f/786a5f.webp)
  */
 export const kColorDanger = {
-  /** ![#EE5046](https://placehold.co/2x2/EE5046/EE5046.webp) */
-  main: '#EE5046',
-  /** ![#FFF3F2](https://placehold.co/2x2/FFF3F2/FFF3F2.webp) */
-  '0': '#FFF3F2',
-  /** ![#FCDCDA](https://placehold.co/2x2/FCDCDA/FCDCDA.webp) */
-  '1': '#FCDCDA',
-  /** ![#F8B9B5](https://placehold.co/2x2/F8B9B5/F8B9B5.webp) */
-  '2': '#F8B9B5',
-  /** ![#F1736B](https://placehold.co/2x2/F1736B/F1736B.webp) */
-  '3': '#F1736B',
-  /** ![#CD4239](https://placehold.co/2x2/CD4239/CD4239.webp) */
-  '4': '#CD4239',
-  /** ![#AC342D](https://placehold.co/2x2/AC342D/AC342D.webp) */
-  '5': '#AC342D',
+  /** ![#ef1313](https://placehold.co/2x2/ef1313/ef1313.webp) */
+  main: '#ef1313',
+  /** ![#f4db35](https://placehold.co/2x2/f4db35/f4db35.webp) */
+  '0': '#f4db35',
+  /** ![#ee9d2a](https://placehold.co/2x2/ee9d2a/ee9d2a.webp) */
+  '1': '#ee9d2a',
+  /** ![#aa3000](https://placehold.co/2x2/aa3000/aa3000.webp) */
+  '2': '#aa3000',
+  /** ![#d7ceba](https://placehold.co/2x2/d7ceba/d7ceba.webp) */
+  '3': '#d7ceba',
+  /** ![#bc836f](https://placehold.co/2x2/bc836f/bc836f.webp) */
+  '4': '#bc836f',
+  /** ![#786a5f](https://placehold.co/2x2/786a5f/786a5f.webp) */
+  '5': '#786a5f',
 } as const;
 
 /**
- * ![#31353B](https://placehold.co/2x2/31353B/31353B.webp)
+ * ![#fdfdfb](https://placehold.co/2x2/fdfdfb/fdfdfb.webp)
  * ![#FFFFFF](https://placehold.co/2x2/FFFFFF/FFFFFF.webp)
  * ![#D6D7D8](https://placehold.co/2x2/D6D7D8/D6D7D8.webp)
  * ![#ADAEB1](https://placehold.co/2x2/ADAEB1/ADAEB1.webp)
@@ -68,8 +71,8 @@ export const kColorDanger = {
  * ![#141518](https://placehold.co/2x2/141518/141518.webp)
  */
 export const kColorNeutral = {
-  /** ![#31353B](https://placehold.co/2x2/31353B/31353B.webp) */
-  main: '#31353B',
+  /** ![#fdfdfb](https://placehold.co/2x2/fdfdfb/fdfdfb.webp) */
+  main: '#fdfdfb',
   /** ![#FFFFFF](https://placehold.co/2x2/FFFFFF/FFFFFF.webp) */
   '0': '#FFFFFF',
   /** ![#D6D7D8](https://placehold.co/2x2/D6D7D8/D6D7D8.webp) */

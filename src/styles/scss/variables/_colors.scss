@@ -6,23 +6,24 @@
 // add more colors, please sync up in `./src/constants/
 // theme/colors.constants.ts` too to prevent confusion.
 
-$kColorPrimary--main: #1069b8;
-$kColorPrimary--0: #e7f0f8;
-$kColorPrimary--1: #afcde7;
-$kColorPrimary--2: #609bd0;
-$kColorPrimary--3: #0d5799;
-$kColorPrimary--4: #0b467b;
-$kColorPrimary--5: #08355c;
+$kColorPrimary--main: #10eac6;
+$kColorPrimary--0: #60a2d4;
+$kColorPrimary--1: #4d78df;
+$kColorPrimary--2: #223da8;
+$kColorPrimary--3: #4d5f97;
+$kColorPrimary--4: #424a5d;
+$kColorPrimary--5: #29396a;
+$kColorPrimary--6: #151c30;
 
-$kColorDanger--main: #ee5046;
-$kColorDanger--0: #fff3f2;
-$kColorDanger--1: #fcdcda;
-$kColorDanger--2: #f8b9b5;
-$kColorDanger--3: #f1736b;
-$kColorDanger--4: #cd4239;
-$kColorDanger--5: #ac342d;
+$kColorDanger--main: #ef1313;
+$kColorDanger--0: #f4db35;
+$kColorDanger--1: #ee9d2a;
+$kColorDanger--2: #aa3000;
+$kColorDanger--3: #d7ceba;
+$kColorDanger--4: #bc836f;
+$kColorDanger--5: #786a5f;
 
-$kColorNeutral--main: #31353b;
+$kColorNeutral--main: #fdfdfb;
 $kColorNeutral--0: #ffffff;
 $kColorNeutral--1: #d6d7d8;
 $kColorNeutral--2: #adaeb1;
@@ -30,4 +31,4 @@ $kColorNeutral--3: #838689;
 $kColorNeutral--4: #272a2f;
 $kColorNeutral--5: #141518;
 
-$kColorBackground--dashboard: #f4f6fa;
+$kColorBackground--dashboard: $kColorNeutral--5;

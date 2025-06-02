@@ -1,4 +1,4 @@
-import { BreadcrumbProps, ButtonProps, LayoutProps } from 'antd';
+import { ButtonProps, LayoutProps } from 'antd';
 
 import { CTSeoMetaProps } from '@/components';
 
@@ -8,22 +8,11 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    */
   actionButtonProps?: ButtonProps[];
   /**
-   * Properties for breadcrumb. Usually for changing style through className or inline style.
-   */
-  breadcrumbProps?: BreadcrumbProps & {
-    /**
-     * For hiding the breadcrumb if unneeded.
-     *
-     * @default
-     * false
-     */
-    isHidden?: boolean;
-  };
-  /**
    * Properties for base inner content layout. Usually for changing padding, marging or even background color
    * through className or inline style.
    */
   contentProps?: React.HTMLAttributes<HTMLElement>;
+  extra?: React.ReactNode;
   /**
    * Title for your page. The title is customizable by using React Node or simply using a string.
    *
@@ -33,4 +22,5 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    * </CTLayoutDashboard>
    */
   titlePage?: string | React.ReactNode;
+  showSidebar?: boolean;
 }

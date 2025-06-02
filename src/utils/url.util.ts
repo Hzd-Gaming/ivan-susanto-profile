@@ -18,3 +18,8 @@ export const paramParsify = (query: string, options?: ParseOptions) =>
     arrayFormat: 'comma',
     ...options,
   });
+
+export const generateUrlWithParams = (
+  pathname: string,
+  stringifiedParams: string
+) => `${pathname}${stringifiedParams ? `?${stringifiedParams}` : ''}`;

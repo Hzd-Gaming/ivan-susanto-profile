@@ -4,7 +4,7 @@ const Error404Page = lazy(() => import('./404.page'));
 
 export const Error404 = () => {
   return (
-    <Suspense fallback={<h1>Error occured.</h1>}>
+    <Suspense fallback={<h1>Error</h1>}>
       <Error404Page />
     </Suspense>
   );

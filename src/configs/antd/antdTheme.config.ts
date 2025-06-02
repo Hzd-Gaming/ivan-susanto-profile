@@ -13,6 +13,10 @@ export const antdTheme: ThemeConfig = {
       triggerBg: 'transparent',
       triggerColor: kColorNeutral.main,
     },
+    Switch: {
+      colorPrimary: kColorPrimary[3],
+      colorPrimaryHover: kColorPrimary[4],
+    },
   },
   token: {
     borderRadius: 8,
