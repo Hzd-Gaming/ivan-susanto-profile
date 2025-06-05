@@ -10,62 +10,36 @@ $header_sidebar_color: kColor.$kColorPrimary--6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $header_sidebar_color;
-  background-image: linear-gradient(
-    0.25turn,
-    $header_sidebar_color,
-    kColor.$kColorPrimary--5,
-    kColor.$kColorPrimary--5,
-    $header_sidebar_color
-  );
-  border-bottom: 3.5px solid kColor.$kColorPrimary--3;
+  background-color: transparent;
   opacity: 95%;
+  height: 7dvh;
+  &--mobile {
+    background-color: $header_sidebar_color;
+    background-image: linear-gradient(
+      0.25turn,
+      $header_sidebar_color,
+      kColor.$kColorPrimary--5,
+      kColor.$kColorPrimary--5,
+      $header_sidebar_color
+    );
+
+    border-bottom: 3.5px solid kColor.$kColorPrimary--3;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 1rem;
+  }
 
   &__title {
     color: kColor.$kColorDanger--0;
-    font-size: 1.625rem;
+    font-size: 1.25rem;
   }
 
-  &--dark {
-    box-shadow: kColor.$kColorPrimary--main 0px 8px 24px;
-    border-bottom: thin solid kColor.$kColorPrimary--1;
-    background-color: kColor.$kColorNeutral--5;
-
-    :where(.ant-input-outlined),
-    :where(.ant-input-affix-wrapper),
-    :where(.ant-input-outlined),
-    :where(.ant-input) {
-      background-color: transparent !important;
-      border-color: kColor.$kColorNeutral--1 !important;
-      color: kColor.$kColorNeutral--1 !important;
-
-      &::placeholder {
-        background-color: transparent !important;
-        border-color: kColor.$kColorNeutral--3 !important;
-        color: kColor.$kColorNeutral--3 !important;
-      }
-
-      &:hover,
-      &:focus-within {
-        background-color: transparent !important;
-        border-color: kColor.$kColorPrimary--3 !important;
-        color: kColor.$kColorPrimary--3 !important;
-      }
-    }
-
-    :where(.ant-input-prefix),
-    :where(.ant-input-suffix > .ant-input-clear-icon) {
-      color: kColor.$kColorNeutral--1 !important;
-    }
-
-    :where(.ant-input-affix-wrapper-focused > .ant-input-prefix),
-    :where(
-        .ant-input-affix-wrapper-focused
-          > .ant-input-suffix
-          > .ant-input-clear-icon
-      ) {
-      color: kColor.$kColorPrimary--3 !important;
+  :where(.anticon) {
+    font-size: 1.25rem;
+    &:where(.anticon-close) {
+      font-size: 0.825rem;
+      padding-bottom: 1.825rem;
     }
   }
-  @extend .px--2;
 }

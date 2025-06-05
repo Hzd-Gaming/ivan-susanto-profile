@@ -1,6 +1,7 @@
 import {
   EnvironmentOutlined,
   HomeOutlined,
+  LinkedinOutlined,
   MailOutlined,
   PhoneOutlined,
   WhatsAppOutlined,
@@ -48,7 +49,7 @@ export const contactOptions: CTMenuListList = [
     label: (
       <Space size={spaceSize}>
         <PhoneOutlined />
-        {'+971-58-864-2881'}
+        {'+1 (403) 431-4901'}
       </Space>
     ),
   },
@@ -66,7 +67,20 @@ export const contactOptions: CTMenuListList = [
     label: (
       <Space size={spaceSize}>
         <EnvironmentOutlined />
-        Canada, North America
+        Banff, Alberta, Canada
+      </Space>
+    ),
+  },
+  {
+    key: 'linkedin',
+    label: (
+      <Space size={spaceSize}>
+        <LinkedinOutlined />
+        <a
+          href="https://www.linkedin.com/in/ivan-susanto-a93433143"
+          target="_blank">
+          My linkedin profile
+        </a>
       </Space>
     ),
   },

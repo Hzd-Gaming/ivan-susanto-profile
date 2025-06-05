@@ -16,6 +16,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   contentProps,
   backgroundVideo,
   meta,
+  titlePage,
   ...rest
 }) => {
   // handle animation onMount
@@ -39,10 +40,8 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
           <Layout.Content
             className="ct_layout_dashboard__content"
             {...contentProps}>
-            <CTLayoutDashboardHeader />
-            <div
-              className="px--4 py--3"
-              style={{ maxHeight: '90dvh', overflow: 'scroll' }}>
+            <CTLayoutDashboardHeader titlePage={titlePage} />
+            <div className="ct_layout_dashboard__content__children_container">
               {children}
             </div>
           </Layout.Content>

@@ -30,6 +30,7 @@ select {
 
 body {
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 
 img,
@@ -76,4 +77,12 @@ button {
 
 :where(.ant-dropdown) {
   z-index: 999 !important;
+}
+
+:where(.hide_scrollbar) {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox, Safari, and Chrome */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }

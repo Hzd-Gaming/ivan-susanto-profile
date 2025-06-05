@@ -45,6 +45,14 @@ $opacity: 80%;
       border-left: 18px solid kColor.$kColorNeutral--5;
     }
     // end of triangular on xAxis side
+
+    &__container {
+      margin-bottom: 1rem;
+    }
+
+    @media only screen and (max-width: 575px) {
+      margin-bottom: 20rem;
+    }
   }
 
   &__profile_img {
@@ -61,10 +69,13 @@ $opacity: 80%;
     opacity: $opacity;
     text-align: justify;
     text-justify: inter-word;
-    margin-bottom: 7rem;
     @extend .py--2;
     @extend .px--4;
     @extend .radius--1;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__profile_stat {
@@ -73,7 +84,6 @@ $opacity: 80%;
       kColor.$kColorPrimary--2
     );
     opacity: $opacity;
-    margin-top: 25rem;
 
     @extend .pt--1;
     @extend .pb--2;
@@ -124,8 +134,17 @@ $opacity: 80%;
       }
 
       &__scrollable_value_container {
-        max-height: 19dvh;
+        max-height: 25dvh;
         overflow: scroll;
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox, Safari, and Chrome */
+        &::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+
+        @media only screen and (max-width: 575px) {
+          max-height: 10dvh;
+        }
       }
 
       &__scrollable_value {

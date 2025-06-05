@@ -237,3 +237,8 @@ export const profileStatDescCulinary = [
     ),
   },
 ];
+
+export const rowProps = { gutter: 24 };
+export const leftColProps = { xs: 24, sm: 14, md: 10 };
+export const middleColProps = { xs: 0, sm: 9, md: 3, lg: 5 };
+export const rightColProps = { xs: 24, sm: 24, md: 11, lg: 9 };

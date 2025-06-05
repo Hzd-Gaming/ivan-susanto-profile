@@ -10,4 +10,5 @@ export interface CTMenuListProps {
   title?: string | ReactNode;
   list: CTMenuListList;
   clickable?: boolean;
+  listWrapperContainerProps?: React.HTMLAttributes<HTMLDivElement>;
 }
