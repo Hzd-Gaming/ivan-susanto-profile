@@ -1,4 +1,4 @@
-import { Space } from 'antd';
+import { Rate, Space } from 'antd';
 
 import culinaryIcSrc from '@/assets/icons/culinary-ic.svg';
 import kitchenKnifeIcSrc from '@/assets/icons/kitchen-knife-ic.svg';
@@ -16,7 +16,7 @@ export const profileStatDescTickets = [
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
         <p className="home_page__profile_stat__desc__scrollable_value">
-          CULINARY DIPLOMA
+          HACCP FOOD SAFETY
         </p>
       </Space>
     ),
@@ -27,7 +27,7 @@ export const profileStatDescTickets = [
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
         <p className="home_page__profile_stat__desc__scrollable_value">
-          ASSOCIATES DEGREE
+          INDONESIAN CUISINE
         </p>
       </Space>
     ),
@@ -38,7 +38,7 @@ export const profileStatDescTickets = [
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
         <p className="home_page__profile_stat__desc__scrollable_value">
-          INDONESIAN PASSPORT
+          THAI CUISINE
         </p>
       </Space>
     ),
@@ -49,7 +49,7 @@ export const profileStatDescTickets = [
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
         <p className="home_page__profile_stat__desc__scrollable_value">
-          MULTILINGUAL
+          GLUTEN FREE
         </p>
       </Space>
     ),
@@ -60,13 +60,97 @@ export const profileStatDescTickets = [
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
         <p className="home_page__profile_stat__desc__scrollable_value">
-          HACCP FOOD SAFETY
+          MIDDLE EASTERN
         </p>
       </Space>
     ),
   },
   {
     key: 't6',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">PIZZA</p>
+      </Space>
+    ),
+  },
+  {
+    key: 't7',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">SUSHI</p>
+      </Space>
+    ),
+  },
+  {
+    key: 't8',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          OMAKASE
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't9',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          FUSION
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't10',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          ITALIAN
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't11',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          MEDITERANIAN
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't12',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          FRENCH
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't13',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          WESTERN
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't14',
     value: (
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
@@ -77,7 +161,7 @@ export const profileStatDescTickets = [
     ),
   },
   {
-    key: 't7',
+    key: 't15',
     value: (
       <Space>
         <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
@@ -87,153 +171,90 @@ export const profileStatDescTickets = [
       </Space>
     ),
   },
+  {
+    key: 't16',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          COST CONTROL
+        </p>
+      </Space>
+    ),
+  },
+  {
+    key: 't17',
+    value: (
+      <Space>
+        <img alt="knife-ic" src={kitchenKnifeIcSrc} height={24} width={24} />
+        <p className="home_page__profile_stat__desc__scrollable_value">
+          MENU PLANNING
+        </p>
+      </Space>
+    ),
+  },
 ];
 
-export const profileStatDescCulinary = [
+export const profileStatDescLang = [
   {
     key: 'c1',
     value: (
-      <Space>
+      <Space size={1}>
         <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          INDONESIAN
-        </p>
+        <Space direction="vertical" size={1}>
+          <p className="home_page__profile_stat__desc__scrollable_value">
+            Indonesian
+          </p>
+          <Rate allowHalf disabled defaultValue={5} />
+        </Space>
       </Space>
     ),
   },
   {
     key: 'c2',
     value: (
-      <Space>
+      <Space size={1}>
         <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">THAI</p>
+        <Space direction="vertical" size={1}>
+          <p className="home_page__profile_stat__desc__scrollable_value">
+            English
+          </p>
+          <Rate allowHalf disabled defaultValue={4.5} />
+        </Space>
       </Space>
     ),
   },
   {
     key: 'c3',
     value: (
-      <Space>
+      <Space size={1}>
         <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">SUSHI</p>
+        <Space direction="vertical" size={1}>
+          <p className="home_page__profile_stat__desc__scrollable_value">
+            Japanese
+          </p>
+          <Rate allowHalf disabled defaultValue={3.5} />
+        </Space>
       </Space>
     ),
   },
   {
     key: 'c4',
     value: (
-      <Space>
+      <Space size={1}>
         <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          SASHIMI
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c5',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          OMAKASE
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c6',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          MEDITERANEAN
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c7',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          FRENCH
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c8',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          GLUTEN FREE
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c9',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">PIZZA</p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c10',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          ITALIAN
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c11',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          MIDDLE EAST
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c12',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          FUSION
-        </p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c13',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">ASIAN</p>
-      </Space>
-    ),
-  },
-  {
-    key: 'c14',
-    value: (
-      <Space>
-        <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
-        <p className="home_page__profile_stat__desc__scrollable_value">
-          WESTERN
-        </p>
+        <Space direction="vertical" size={1}>
+          <p className="home_page__profile_stat__desc__scrollable_value">
+            Chinese
+          </p>
+          <Rate allowHalf disabled defaultValue={3} />
+        </Space>
       </Space>
     ),
   },
 ];
+
+export const rowProps = { gutter: 24 };
+export const leftColProps = { xs: 24, sm: 14, md: 10 };
+export const middleColProps = { xs: 0, sm: 9, md: 3, lg: 5 };
+export const rightColProps = { xs: 24, sm: 24, md: 11, lg: 9 };

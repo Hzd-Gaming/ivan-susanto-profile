@@ -13,7 +13,7 @@
   }
   &__content {
     min-height: 100dvh;
-    background-image: url('/src/assets/images/profile-background-fallback.png');
+    background-image: url('/src/assets/images/profile-background-fallback.webp');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -24,6 +24,24 @@
 
       &__button {
         width: 100%;
+      }
+    }
+
+    &__children_container {
+      max-height: 90dvh;
+      overflow: scroll;
+
+      @extend .px--4;
+      @extend .py--3;
+
+      @media only screen and (min-width: 768px) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        max-height: 96dvh;
+        padding-top: 0.5rem;
       }
     }
   }

@@ -1,47 +1,50 @@
 import { useRef } from 'react';
 
-import { CloseOutlined, FilterTwoTone, SoundOutlined } from '@ant-design/icons';
+import { CloseOutlined, MenuOutlined, SoundOutlined } from '@ant-design/icons';
 import { Layout, Space } from 'antd';
+import cx from 'classnames';
 import { useMediaQuery } from 'usehooks-ts';
 
 import './Header.style.scss';
 
-import { kColorNeutral, kColorPrimary } from '@/constants/theme';
 import { useComponentStore } from '@/stores/common';
+
+import { CTLayoutDashboardHeaderProps } from './Header.type';
 
 const { Header } = Layout;
 
-const CTLayoutDashboardHeader: React.FC = () => {
+const CTLayoutDashboardHeader: React.FC<CTLayoutDashboardHeaderProps> = ({
+  titlePage,
+}) => {
   const headerRef = useRef<HTMLElement>(null);
 
-  const isDesktop = useMediaQuery('(min-width: 769px)');
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const {
     isBackgroundMusicMuted,
     updateIsSidebarOpen,
-    updateSidebarType,
     updateIsBackgroundMusicMuted,
   } = useComponentStore((state) => state);
 
   return (
-    <Header className="ct_layout_dashboard__header" ref={headerRef}>
+    <Header
+      className={cx(
+        'ct_layout_dashboard__header',
+        !isDesktop && 'ct_layout_dashboard__header--mobile'
+      )}
+      ref={headerRef}>
       <div>
         {!isDesktop && (
-          <FilterTwoTone
-            className="mr--2"
-            style={{ fontSize: 18 }}
-            twoToneColor={
-              isBackgroundMusicMuted ? kColorPrimary[3] : kColorNeutral[5]
-            }
+          <MenuOutlined
+            className="mr--4"
             onClick={() => {
-              updateSidebarType('filter');
               updateIsSidebarOpen(true);
             }}
           />
         )}
       </div>
 
-      <p className="ct_layout_dashboard__header__title">PROFILE</p>
+      <p className="ct_layout_dashboard__header__title">{titlePage}</p>
 
       <div
         onClick={() => updateIsBackgroundMusicMuted(!isBackgroundMusicMuted)}
@@ -49,15 +52,11 @@ const CTLayoutDashboardHeader: React.FC = () => {
         style={{ cursor: 'pointer' }}>
         {isBackgroundMusicMuted ? (
           <Space size={0} align="center">
-            <SoundOutlined style={{ fontSize: 24 }} />
-            <CloseOutlined
-              style={{
-                paddingBottom: 30,
-              }}
-            />
+            <SoundOutlined />
+            <CloseOutlined />
           </Space>
         ) : (
-          <SoundOutlined style={{ fontSize: 24 }} />
+          <SoundOutlined />
         )}
       </div>
     </Header>
