@@ -8,7 +8,6 @@ const useComponentStore = create<UseComponentStoreProps>((set) => ({
   footerDescription: '',
   isBackgroundMusicMuted: true,
   isSidebarOpen: false,
-  sidebarType: 'filter',
   updateFooterDescription(value) {
     set((state) => {
       return { ...state, footerDescription: value };
@@ -23,11 +22,6 @@ const useComponentStore = create<UseComponentStoreProps>((set) => ({
     set((state) => {
       localStorage.setItem(kStorageKey.DarkMode, value?.toString());
       return { ...state, isBackgroundMusicMuted: value };
-    });
-  },
-  updateSidebarType(value) {
-    set((state) => {
-      return { ...state, sidebarType: value };
     });
   },
 }));

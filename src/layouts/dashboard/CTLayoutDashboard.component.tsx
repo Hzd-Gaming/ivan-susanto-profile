@@ -1,11 +1,16 @@
 import { Layout } from 'antd';
 import cx from 'classnames';
 import { useSpring, animated } from 'react-spring';
+import { useMediaQuery } from 'usehooks-ts';
 
 import { CTSeoMeta } from '@/components';
+import { useComponentStore } from '@/stores/common';
 
 import { CTLayoutDashboardProps } from './CTLayoutDashboard.type';
-import { CTLayoutDashboardHeader } from './subcomponent';
+import {
+  CTLayoutDashboardHeader,
+  CTLayoutDashboardSidebar,
+} from './subcomponent';
 
 import '@/styles/scss/utils/_margin.scss';
 import './CTLayoutDashboard.style.scss';
@@ -27,6 +32,10 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   });
   // end of region
 
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+
+  const { isSidebarOpen } = useComponentStore((state) => state);
+
   return (
     <div className={cx('ct_layout_dashboard', className)} {...rest}>
       <CTSeoMeta meta={meta} />
@@ -40,6 +49,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
           <Layout.Content
             className="ct_layout_dashboard__content"
             {...contentProps}>
+            {!isDesktop && isSidebarOpen && <CTLayoutDashboardSidebar />}
             <CTLayoutDashboardHeader titlePage={titlePage} />
             <div className="ct_layout_dashboard__content__children_container">
               {children}

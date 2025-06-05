@@ -23,7 +23,6 @@ const CTLayoutDashboardHeader: React.FC<CTLayoutDashboardHeaderProps> = ({
   const {
     isBackgroundMusicMuted,
     updateIsSidebarOpen,
-    updateSidebarType,
     updateIsBackgroundMusicMuted,
   } = useComponentStore((state) => state);
 
@@ -39,7 +38,6 @@ const CTLayoutDashboardHeader: React.FC<CTLayoutDashboardHeaderProps> = ({
           <MenuOutlined
             className="mr--4"
             onClick={() => {
-              updateSidebarType('filter');
               updateIsSidebarOpen(true);
             }}
           />
