@@ -10,7 +10,7 @@ import {
   kHomePageMeta,
   leftColProps,
   middleColProps,
-  profileStatDescCulinary,
+  profileStatDescLang,
   profileStatDescTickets,
   rightColProps,
   rowProps,
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
                   </Row>
                 </div>
               </div>
-              <Carousel arrows draggable>
+              <Carousel infinite={false} arrows draggable>
                 <div>
                   <div className="home_page__profile_bio">
                     {`Dynamic Chef eager to bring a youthful zeal and a collaborative mindset to the team, 
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
                       <Col
                         className="home_page__profile_stat__desc__col_left_container"
                         span={12}>
-                        <p className="mb--1">Tickets:</p>
+                        <p className="mb--1">Skills:</p>
                         <div className="home_page__profile_stat__desc__scrollable_value_container">
                           {profileStatDescTickets?.map(({ key, value }) => (
                             <div key={key}>{value}</div>
@@ -71,10 +71,12 @@ const HomePage: React.FC = () => {
                         </div>
                       </Col>
                       <Col span={12}>
-                        <p className="mb--1">Culinary:</p>
+                        <p className="mb--1">Language:</p>
                         <div className="home_page__profile_stat__desc__scrollable_value_container">
-                          {profileStatDescCulinary?.map(({ key, value }) => (
-                            <div key={key}>{value}</div>
+                          {profileStatDescLang?.map(({ key, value }) => (
+                            <div className="mb--2" key={key}>
+                              {value}
+                            </div>
                           ))}
                         </div>
                       </Col>
@@ -140,7 +142,7 @@ const HomePage: React.FC = () => {
                   <Col
                     className="home_page__profile_stat__desc__col_left_container"
                     span={12}>
-                    <p className="mb--1">Tickets:</p>
+                    <p className="mb--1">Skills:</p>
                     <div className="home_page__profile_stat__desc__scrollable_value_container">
                       {profileStatDescTickets?.map(({ key, value }) => (
                         <div key={key}>{value}</div>
@@ -148,10 +150,12 @@ const HomePage: React.FC = () => {
                     </div>
                   </Col>
                   <Col span={12}>
-                    <p className="mb--1">Culinary:</p>
+                    <p className="mb--1">Language:</p>
                     <div className="home_page__profile_stat__desc__scrollable_value_container">
-                      {profileStatDescCulinary?.map(({ key, value }) => (
-                        <div key={key}>{value}</div>
+                      {profileStatDescLang?.map(({ key, value }) => (
+                        <div className="mb--2" key={key}>
+                          {value}
+                        </div>
                       ))}
                     </div>
                   </Col>
