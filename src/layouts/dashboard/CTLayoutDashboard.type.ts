@@ -7,6 +7,7 @@ export interface CTLayoutDashboardProps extends LayoutProps, CTSeoMetaProps {
    * Properties for action buttons on the right page besides the title page.
    */
   actionButtonProps?: ButtonProps[];
+  backgroundVideo?: React.ReactNode;
   /**
    * Properties for base inner content layout. Usually for changing padding, marging or even background color
    * through className or inline style.

@@ -1,3 +1,4 @@
+@use '@/styles/scss/utils/margin';
 @use '@/styles/scss/utils/padding';
 @use '@/styles/scss/variables/colors' as kColor;
 @use '@/styles/scss/utils/borderRadius';
@@ -60,6 +61,7 @@ $opacity: 80%;
     opacity: $opacity;
     text-align: justify;
     text-justify: inter-word;
+    margin-bottom: 7rem;
     @extend .py--2;
     @extend .px--4;
     @extend .radius--1;
@@ -71,9 +73,11 @@ $opacity: 80%;
       kColor.$kColorPrimary--2
     );
     opacity: $opacity;
+    margin-top: 25rem;
+
     @extend .pt--1;
     @extend .pb--2;
-    @extend .px--4;
+    @extend .px--3;
     @extend .radius--1;
 
     &__title {
@@ -120,7 +124,7 @@ $opacity: 80%;
       }
 
       &__scrollable_value_container {
-        max-height: 10dvh;
+        max-height: 19dvh;
         overflow: scroll;
       }
 

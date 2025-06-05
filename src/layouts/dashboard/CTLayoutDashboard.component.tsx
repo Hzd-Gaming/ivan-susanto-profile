@@ -14,6 +14,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   children,
   className,
   contentProps,
+  backgroundVideo,
   meta,
   ...rest
 }) => {
@@ -30,6 +31,11 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
       <CTSeoMeta meta={meta} />
       <animated.div style={animationOnMountWholeLayout}>
         <Layout className={cx('ct_layout_dashboard__inner')}>
+          {Boolean(backgroundVideo) && (
+            <div className="ct_layout_dashboard__inner__background_video">
+              {backgroundVideo}
+            </div>
+          )}
           <Layout.Content
             className="ct_layout_dashboard__content"
             {...contentProps}>
