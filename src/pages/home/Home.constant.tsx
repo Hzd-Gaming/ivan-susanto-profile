@@ -245,7 +245,7 @@ export const profileStatDescLang = [
         <img alt="culinary-ic" src={culinaryIcSrc} height={24} width={24} />
         <Space direction="vertical" size={1}>
           <p className="home_page__profile_stat__desc__scrollable_value">
-            Japanese
+            Chinese
           </p>
           <Rate allowHalf disabled defaultValue={3} />
         </Space>
