@@ -4,7 +4,6 @@ import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'usehooks-ts';
 
 import { CTSeoMeta } from '@/components';
-import { useComponentStore } from '@/stores/common';
 
 import { CTLayoutDashboardProps } from './CTLayoutDashboard.type';
 import {
@@ -34,8 +33,6 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
 
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
-  const { isSidebarOpen } = useComponentStore((state) => state);
-
   return (
     <div className={cx('ct_layout_dashboard', className)} {...rest}>
       <CTSeoMeta meta={meta} />
@@ -49,7 +46,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
           <Layout.Content
             className="ct_layout_dashboard__content"
             {...contentProps}>
-            {!isDesktop && isSidebarOpen && <CTLayoutDashboardSidebar />}
+            {!isDesktop && <CTLayoutDashboardSidebar />}
             <CTLayoutDashboardHeader titlePage={titlePage} />
             <div className="ct_layout_dashboard__content__children_container">
               {children}
