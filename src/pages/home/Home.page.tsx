@@ -2,7 +2,7 @@ import { Carousel, Col, Row, Space } from 'antd';
 import { useMediaQuery } from 'usehooks-ts';
 
 import { CTMenuList } from '@/components';
-import { contactOptions, menuOptions } from '@/constants/common';
+import { contactOptions } from '@/constants/common';
 import { CTLayoutDashboard } from '@/layouts';
 
 import { ProfileBackgroundVideo } from './components';
@@ -97,11 +97,6 @@ const HomePage: React.FC = () => {
                 coupled with a proven track record of providing safe, 
                 innovative solutions to culinary challenges based on extensive industry experience.`}
               </div>
-            </div>
-          )}
-          {isDesktop && (
-            <div>
-              <CTMenuList title="About" list={menuOptions} clickable />
             </div>
           )}
         </Col>

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import { CloseOutlined, MenuOutlined, SoundOutlined } from '@ant-design/icons';
-import { Layout, Space } from 'antd';
+import { Layout } from 'antd';
 import cx from 'classnames';
 import { useMediaQuery } from 'usehooks-ts';
 
@@ -33,28 +33,31 @@ const CTLayoutDashboardHeader: React.FC<CTLayoutDashboardHeaderProps> = ({
         !isDesktop && 'ct_layout_dashboard__header--mobile'
       )}
       ref={headerRef}>
-      <div>
-        {!isDesktop && (
-          <MenuOutlined
-            className="mr--4"
-            onClick={() => {
-              updateIsSidebarOpen(true);
-            }}
-          />
-        )}
-      </div>
+      {!isDesktop && (
+        <MenuOutlined
+          className="mr--4"
+          onClick={() => {
+            updateIsSidebarOpen(true);
+          }}
+        />
+      )}
 
       <p className="ct_layout_dashboard__header__title">{titlePage}</p>
 
       <div
         onClick={() => updateIsBackgroundMusicMuted(!isBackgroundMusicMuted)}
         className="ml--2"
-        style={{ cursor: 'pointer' }}>
+        style={{
+          cursor: 'pointer',
+          display: 'flex',
+          flexDirection: 'row',
+          height: '100%',
+        }}>
         {isBackgroundMusicMuted ? (
-          <Space size={0} align="center">
+          <>
             <SoundOutlined />
             <CloseOutlined />
-          </Space>
+          </>
         ) : (
           <SoundOutlined />
         )}

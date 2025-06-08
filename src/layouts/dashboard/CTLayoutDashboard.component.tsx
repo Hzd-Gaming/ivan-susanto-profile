@@ -1,9 +1,11 @@
-import { Layout } from 'antd';
+import { Col, Layout, Row } from 'antd';
 import cx from 'classnames';
 import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'usehooks-ts';
 
-import { CTSeoMeta } from '@/components';
+import { CTMenuList, CTSeoMeta } from '@/components';
+import { menuOptions } from '@/constants/common';
+import { leftColProps } from '@/pages/home/Home.constant';
 
 import { CTLayoutDashboardProps } from './CTLayoutDashboard.type';
 import {
@@ -48,6 +50,18 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
             {!isDesktop && <CTLayoutDashboardSidebar />}
             <CTLayoutDashboardHeader titlePage={titlePage} />
             <div className="ct_layout_dashboard__content__children_container">
+              {isDesktop && (
+                <Row>
+                  <Col {...leftColProps}>
+                    <CTMenuList
+                      listWrapperContainerProps={{ className: 'mb--3' }}
+                      title="About"
+                      list={menuOptions}
+                      clickable
+                    />
+                  </Col>
+                </Row>
+              )}
               {children}
             </div>
           </Layout.Content>
