@@ -11,7 +11,6 @@ import {
   CTLayoutDashboardSidebar,
 } from './subcomponent';
 
-import '@/styles/scss/utils/_margin.scss';
 import './CTLayoutDashboard.style.scss';
 
 const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({

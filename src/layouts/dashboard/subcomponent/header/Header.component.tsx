@@ -5,11 +5,11 @@ import { Layout, Space } from 'antd';
 import cx from 'classnames';
 import { useMediaQuery } from 'usehooks-ts';
 
-import './Header.style.scss';
-
 import { useComponentStore } from '@/stores/common';
 
 import { CTLayoutDashboardHeaderProps } from './Header.type';
+
+import './Header.style.scss';
 
 const { Header } = Layout;
 
