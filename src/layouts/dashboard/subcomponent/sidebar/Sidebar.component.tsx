@@ -1,4 +1,7 @@
+import { useMemo } from 'react';
+
 import { Drawer } from 'antd';
+import { useLocation } from 'react-router-dom';
 
 import { CTMenuList } from '@/components';
 import { contactOptions, menuOptions } from '@/constants/common';
@@ -11,6 +14,13 @@ import './Sidebar.style.scss';
 const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
   props
 ) => {
+  const location = useLocation();
+
+  const filteredMenuOpt = useMemo(
+    () => menuOptions?.filter((el) => el?.key !== location?.pathname),
+    [location]
+  );
+
   const { isSidebarOpen, updateIsSidebarOpen } = useComponentStore(
     (state) => state
   );
@@ -26,7 +36,7 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
       {...props}>
       <CTMenuList
         title="About"
-        list={menuOptions}
+        list={filteredMenuOpt}
         clickable
         listWrapperContainerProps={{
           className: 'mb--10 pb--4',

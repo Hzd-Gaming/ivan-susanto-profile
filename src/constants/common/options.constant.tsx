@@ -13,14 +13,19 @@ import { RouteEndpointsCommon } from '@/constants/route-endpoint';
 
 export const menuOptions: CTMenuListList = [
   {
-    key: 'exp',
+    key: RouteEndpointsCommon.DISHES,
+    label: 'Dishes',
+    path: RouteEndpointsCommon.DISHES,
+  },
+  {
+    key: RouteEndpointsCommon.EXPERIENCES,
     label: 'Experiences',
     path: RouteEndpointsCommon.EXPERIENCES,
   },
   {
-    key: 'dishes',
-    label: 'Dishes',
-    path: RouteEndpointsCommon.DISHES,
+    key: RouteEndpointsCommon.HOME,
+    label: 'Profile',
+    path: RouteEndpointsCommon.HOME,
   },
 ];
 
