@@ -17,7 +17,15 @@ const CTLayoutDashboardSidebar: React.FC<CTLayputDashboardSidebarProps> = (
   const location = useLocation();
 
   const filteredMenuOpt = useMemo(
-    () => menuOptions?.filter((el) => el?.key !== location?.pathname),
+    () =>
+      menuOptions?.filter((el) => {
+        const splittedPathname = location?.pathname?.split('/');
+        if (splittedPathname?.[splittedPathname.length - 1] === '') {
+          splittedPathname.pop();
+        }
+        const trimmedPathname = splittedPathname?.join('/');
+        return el?.key !== trimmedPathname;
+      }),
     [location]
   );
 

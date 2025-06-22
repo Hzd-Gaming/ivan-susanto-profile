@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 import BackgroundProfileVideoSrc from '@/assets/videos/profile-background-compressed.mp4';
-import './ProfileBackgroundVide.scss';
+import './ProfileBackgroundVideo.scss';
 
 const ProfileBackgroundVideo: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);

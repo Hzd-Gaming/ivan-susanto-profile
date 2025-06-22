@@ -29,7 +29,7 @@ const CTContainer: React.FC<CTContainerProps> = ({
     return title;
   }, [theme, title]);
   return (
-    <div className={cx('ct-container', theme && `ct-container--${theme}`)}>
+    <div className={cx('ct-container', theme && `ct-container__${theme}`)}>
       {Boolean(title) && dynamicTitle}
       <div className="children">{children}</div>
     </div>
