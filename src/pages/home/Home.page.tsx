@@ -1,7 +1,7 @@
 import { Carousel, Col, Row, Space } from 'antd';
 import { useMediaQuery } from 'usehooks-ts';
 
-import { CTMenuList } from '@/components';
+import { CTContainer, CTMenuList } from '@/components';
 import { contactOptions } from '@/constants/common';
 import { CTLayoutDashboard } from '@/layouts';
 
@@ -39,15 +39,15 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               <Carousel infinite={false} arrows draggable>
-                <div className="home_page__profile_bio">
+                <CTContainer theme="black">
                   {`Dynamic Chef eager to bring a youthful zeal and a collaborative mindset to the team, 
                 coupled with a proven track record of providing safe, 
                 innovative solutions to culinary challenges based on extensive industry experience.`}
-                </div>
+                </CTContainer>
 
-                <div className="home_page__profile_stat">
-                  <div className="home_page__profile_stat__title">Status</div>
-                  <div className="home_page__profile_stat__title__border_bottom" />
+                <CTContainer theme="blue" title="Status">
+                  {/* <div className="home_page__profile_stat__title">Status</div>
+                  <div className="home_page__profile_stat__title__border_bottom" /> */}
                   <div className="mt--2 home_page__profile_stat__desc">
                     <Space className="mb--1" size={24}>
                       <p>Job:</p>
@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
                       </Col>
                     </Row>
                   </div>
-                </div>
+                </CTContainer>
               </Carousel>
             </>
           ) : (
@@ -119,9 +119,7 @@ const HomePage: React.FC = () => {
           </Col>
           <Col {...middleColProps} />
           <Col {...rightColProps}>
-            <div className="home_page__profile_stat">
-              <div className="home_page__profile_stat__title">Status</div>
-              <div className="home_page__profile_stat__title__border_bottom" />
+            <CTContainer theme="blue" title="Status">
               <div className="mt--2 home_page__profile_stat__desc">
                 <Space className="mb--1" size={24}>
                   <p>Job:</p>
@@ -154,7 +152,7 @@ const HomePage: React.FC = () => {
                   </Col>
                 </Row>
               </div>
-            </div>
+            </CTContainer>
           </Col>
         </Row>
       )}

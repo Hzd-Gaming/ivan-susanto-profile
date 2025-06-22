@@ -1,0 +1,69 @@
+@use '@/styles/scss/utils/padding';
+@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/utils/borderRadius';
+
+$opacity: 80%;
+
+.ct-container {
+  opacity: $opacity;
+
+  @extend .py--2;
+  @extend .px--4;
+  @extend .radius--1;
+
+  // Background based on theme
+  &--blue {
+    background-image: linear-gradient(
+      kColor.$kColorNeutral--4,
+      kColor.$kColorPrimary--2
+    );
+
+    :where(.title__text) {
+      text-align: center;
+      font-size: 1.125rem;
+    }
+
+    :where(.title__border_bottom) {
+      position: relative;
+      padding: 0.5px;
+      background-color: kColor.$kColorNeutral--main;
+
+      // triangular on xAxis side
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: -1.5px;
+        width: 0px;
+        height: 0px;
+        border-top: 0.125rem solid transparent;
+        border-bottom: 0.125rem solid transparent;
+        opacity: $opacity;
+      }
+      &:before {
+        right: 100%;
+        border-right: 18px solid kColor.$kColorNeutral--main;
+      }
+      &:after {
+        left: 100%;
+        border-left: 18px solid kColor.$kColorNeutral--main;
+      }
+      // end of triangular on xAxis side
+    }
+  }
+
+  &--black {
+    background-image: linear-gradient(
+      0.25turn,
+      kColor.$kColorNeutral--4,
+      kColor.$kColorNeutral--5,
+      kColor.$kColorNeutral--4
+    );
+  }
+  // end of region Background based on theme
+
+  :where(.children) {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
