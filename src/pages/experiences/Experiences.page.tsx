@@ -2,14 +2,14 @@ import { useMediaQuery } from 'usehooks-ts';
 
 import { CTLayoutDashboard } from '@/layouts';
 
-const ExperiencesPage: React.FC = () => {
+const DishesPage: React.FC = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
     <CTLayoutDashboard
-      className="dishes_page"
-      {...(!isDesktop ? { titlePage: 'DISHES' } : {})}></CTLayoutDashboard>
+      className="experiences_page"
+      {...(!isDesktop ? { titlePage: 'EXPERIENCES' } : {})}></CTLayoutDashboard>
   );
 };
 
-export default ExperiencesPage;
+export default DishesPage;
