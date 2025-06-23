@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+name: Deploy Production Web on push in branch main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-production:
+    name: 'Deploy Production'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - name: Use Node defined in .nvmrc (18.14.1)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.14.1'
+      - run: node --version
+
+      - uses: actions/checkout@v4
+      - name: Install Packages
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to Github Pages
+        uses: peaceiris/action-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          publish_dir: ./build
