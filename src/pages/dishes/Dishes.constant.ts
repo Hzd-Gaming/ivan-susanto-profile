@@ -36,7 +36,7 @@ export const dishList: DishList = [
   { title: 'Gyoza', imageUrl: ['Gyoza.jpg'] },
   {
     title: 'Maguro Tataki',
-    imageUrl: ['Maguro tataki(1)', 'Maguro tataki.jpg'],
+    imageUrl: ['Maguro tataki(1).jpg', 'Maguro tataki.jpg'],
   },
   { title: 'Assorted Charcuterie', imageUrl: ['Assorted Charcuterie_.jpg'] },
   { title: 'Assorted Fruits', imageUrl: ['Assorted fruits.jpg'] },

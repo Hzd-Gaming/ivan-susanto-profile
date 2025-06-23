@@ -22,7 +22,10 @@ const DishImageSection: React.FC<DishImageSectionProps> = ({
         {imageUrl?.length > 1 ? (
           <Carousel arrows adaptiveHeight autoplay dots={false}>
             {imageUrl?.map((el) => {
-              const completeUrl = `/src/assets/images/${el}`;
+              const completeUrl = new URL(
+                `/src/assets/images/${el}`,
+                import.meta.url
+              )?.href;
               return (
                 <Image
                   key={el}
@@ -37,7 +40,10 @@ const DishImageSection: React.FC<DishImageSectionProps> = ({
           <Image
             width="100%"
             height={imageHeight}
-            src={`/src/assets/images/${imageUrl?.[0]}`}
+            src={
+              new URL(`/src/assets/images/${imageUrl?.[0]}`, import.meta.url)
+                ?.href
+            }
           />
         )}
       </CTContainer>
