@@ -1,0 +1,32 @@
+@use '@/styles/scss/variables/colors' as kColor;
+
+.profile_stat {
+  &__desc {
+    &__job_value {
+      font-size: 1rem;
+      color: kColor.$kColorDanger--0;
+    }
+
+    &__col_left_container {
+      border-right: 0.125rem solid kColor.$kColorNeutral--2;
+    }
+
+    &__scrollable_value_container {
+      max-height: 25dvh;
+      overflow: scroll;
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none; /* Firefox, Safari, and Chrome */
+      &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+
+      @media only screen and (max-width: 575px) {
+        max-height: 10dvh;
+      }
+    }
+
+    &__scrollable_value {
+      color: kColor.$kColorPrimary--main;
+    }
+  }
+}

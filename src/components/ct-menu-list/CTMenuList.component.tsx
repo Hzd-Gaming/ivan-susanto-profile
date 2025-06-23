@@ -4,6 +4,8 @@ import { Space } from 'antd';
 import cx from 'classnames';
 import { useNavigate } from 'react-router-dom';
 
+import { useComponentStore } from '@/stores/common';
+
 import { CTMenuListProps } from './CTMenuList.types';
 
 import './CTMenuList.style.scss';
@@ -15,14 +17,16 @@ const CTMenuList: React.FC<CTMenuListProps> = ({
   listWrapperContainerProps = {},
 }) => {
   const navigate = useNavigate();
+  const { updateIsSidebarOpen } = useComponentStore((state) => state);
 
   const handleOnClickMenu = useCallback(
     (path: string | undefined) => {
       if (path && clickable) {
+        updateIsSidebarOpen(false);
         navigate(path);
       }
     },
-    [clickable, navigate]
+    [clickable, navigate, updateIsSidebarOpen]
   );
 
   return (

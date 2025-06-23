@@ -1,5 +1,8 @@
+import { useMemo } from 'react';
+
 import { Col, Layout, Row } from 'antd';
 import cx from 'classnames';
+import { useLocation } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import { useMediaQuery } from 'usehooks-ts';
 
@@ -24,6 +27,21 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
   titlePage,
   ...rest
 }) => {
+  const location = useLocation();
+
+  const filteredMenuOpt = useMemo(
+    () =>
+      menuOptions?.filter((el) => {
+        const splittedPathname = location?.pathname?.split('/');
+        if (splittedPathname?.[splittedPathname.length - 1] === '') {
+          splittedPathname.pop();
+        }
+        const trimmedPathname = splittedPathname?.join('/');
+        return el?.key !== trimmedPathname;
+      }),
+    [location]
+  );
+
   // handle animation onMount
   const animationOnMountWholeLayout = useSpring({
     from: { opacity: 0 },
@@ -56,7 +74,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
                     <CTMenuList
                       listWrapperContainerProps={{ className: 'mb--3' }}
                       title="About"
-                      list={menuOptions}
+                      list={filteredMenuOpt}
                       clickable
                     />
                   </Col>
