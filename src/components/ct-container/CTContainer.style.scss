@@ -11,6 +11,11 @@ $opacity: 80%;
   @extend .px--4;
   @extend .radius--1;
 
+  @media only screen and (width < 958px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   // Background based on theme
   &__blue {
     background-image: linear-gradient(
@@ -27,6 +32,11 @@ $opacity: 80%;
       position: relative;
       padding: 0.5px;
       background-color: kColor.$kColorNeutral--main;
+
+      @media only screen and (width < 958px) {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
 
       // triangular on xAxis side
       &:before,
@@ -64,6 +74,5 @@ $opacity: 80%;
 
   :where(.children) {
     text-align: justify;
-    text-justify: inter-word;
   }
 }

@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
           {isXsMobile ? (
             <>
               <CTTitle title="Ivan Susanto" />
-              <Carousel infinite={false} arrows draggable>
+              <Carousel infinite={false} arrows draggable adaptiveHeight>
                 <ProfileBioDesc />
                 <ProfileStatus />
               </Carousel>
