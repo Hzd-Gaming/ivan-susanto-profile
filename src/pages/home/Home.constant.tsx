@@ -1,9 +1,14 @@
 import { TComponentSeoMeta } from '@/types/common';
 
-export const kHomePageMeta: TComponentSeoMeta = {
+export const ctPageMeta: TComponentSeoMeta = {
   descriptionPage: 'Home page for Ivan Susanto Profile',
   titlePage: 'Ivan Susanto Profile',
 };
+
+export const rowProps = { gutter: 24 };
+export const leftColProps = { xs: 24, sm: 14, md: 10, lg: 10 };
+export const middleColProps = { xs: 0, sm: 9, md: 2, lg: 4 };
+export const rightColProps = { xs: 24, sm: 24, md: 12, lg: 10 };
 
 export const profileStatDescTickets = [
   {
@@ -77,8 +82,3 @@ export const profileStatDescLang = [
     rate: 3,
   },
 ];
-
-export const rowProps = { gutter: 24 };
-export const leftColProps = { xs: 24, sm: 14, md: 10, lg: 10 };
-export const middleColProps = { xs: 0, sm: 9, md: 2, lg: 4 };
-export const rightColProps = { xs: 24, sm: 24, md: 12, lg: 10 };

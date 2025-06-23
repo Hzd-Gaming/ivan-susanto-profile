@@ -10,16 +10,23 @@ const CTContainer: React.FC<CTContainerProps> = ({
   children,
   theme,
   title,
+  style = {},
 }) => {
   const dynamicTitle = useMemo(() => {
     if (typeof title === 'string') {
       switch (theme) {
         case 'black':
-          return <></>;
+          return (
+            <>
+              <div className="title__border_top" />
+              <h1 className="title__text">{title}</h1>
+              <div className="title__border_bottom" />
+            </>
+          );
         case 'blue':
           return (
             <>
-              <div className="title__text">{title}</div>
+              <h1 className="title__text">{title}</h1>
               <div className="title__border_bottom" />
             </>
           );
@@ -29,7 +36,9 @@ const CTContainer: React.FC<CTContainerProps> = ({
     return title;
   }, [theme, title]);
   return (
-    <div className={cx('ct-container', theme && `ct-container__${theme}`)}>
+    <div
+      className={cx('ct-container', theme && `ct-container__${theme}`)}
+      style={style}>
       {Boolean(title) && dynamicTitle}
       <div className="children">{children}</div>
     </div>

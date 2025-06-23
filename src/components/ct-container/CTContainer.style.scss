@@ -26,6 +26,7 @@ $opacity: 80%;
     :where(.title__text) {
       text-align: center;
       font-size: 1.125rem;
+      font-weight: normal;
     }
 
     :where(.title__border_bottom) {
@@ -69,6 +70,25 @@ $opacity: 80%;
       kColor.$kColorNeutral--5,
       kColor.$kColorNeutral--4
     );
+
+    :where(.title__border_top),
+    :where(.title__border_bottom) {
+      padding: 1px;
+      background-color: kColor.$kColorDanger--0;
+    }
+    :where(.title__border_bottom) {
+      margin-bottom: 1rem;
+    }
+    :where(.title__text) {
+      color: kColor.$kColorDanger--0;
+      text-align: center;
+      background-image: linear-gradient(
+        0.25turn,
+        kColor.$kColorNeutral--4,
+        kColor.$kColorDanger--2,
+        kColor.$kColorNeutral--4
+      );
+    }
   }
   // end of region Background based on theme
 
