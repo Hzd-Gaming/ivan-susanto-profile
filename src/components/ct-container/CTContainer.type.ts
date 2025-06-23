@@ -1,7 +1,12 @@
-import { ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-export interface CTContainerProps {
-  children?: ReactNode;
-  title?: string | ReactNode;
+export interface CTContainerProps
+  extends Partial<
+    Omit<
+      DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+      'title'
+    >
+  > {
   theme: 'black' | 'blue';
+  title?: string | ReactNode;
 }

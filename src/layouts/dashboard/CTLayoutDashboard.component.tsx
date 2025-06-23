@@ -65,23 +65,27 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
           <Layout.Content
             className="ct_layout_dashboard__content"
             {...contentProps}>
-            {!isDesktop && <CTLayoutDashboardSidebar />}
-            <CTLayoutDashboardHeader titlePage={titlePage} />
-            <div className="ct_layout_dashboard__content__children_container">
+            <header>
+              {!isDesktop && <CTLayoutDashboardSidebar />}
+              <CTLayoutDashboardHeader titlePage={titlePage} />
+            </header>
+            <main className="ct_layout_dashboard__content__children_container">
               {isDesktop && (
                 <Row>
                   <Col {...leftColProps}>
-                    <CTMenuList
-                      listWrapperContainerProps={{ className: 'mb--3' }}
-                      title="About"
-                      list={filteredMenuOpt}
-                      clickable
-                    />
+                    <section>
+                      <CTMenuList
+                        listWrapperContainerProps={{ className: 'mb--3' }}
+                        title="About"
+                        list={filteredMenuOpt}
+                        clickable
+                      />
+                    </section>
                   </Col>
                 </Row>
               )}
               {children}
-            </div>
+            </main>
           </Layout.Content>
         </Layout>
       </animated.div>

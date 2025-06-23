@@ -8,6 +8,9 @@ import {
 
 export const antdTheme: ThemeConfig = {
   components: {
+    Input: {
+      colorText: kColorNeutral[4],
+    },
     Layout: {
       siderBg: kColorBackground.dashboard,
       triggerBg: 'transparent',

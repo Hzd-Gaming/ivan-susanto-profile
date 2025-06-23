@@ -11,12 +11,13 @@ import {
   ProfileStatus,
 } from './components';
 import {
-  kHomePageMeta,
+  ctPageMeta,
   leftColProps,
   middleColProps,
   rightColProps,
   rowProps,
 } from './Home.constant';
+
 import './Home.style.scss';
 
 const HomePage: React.FC = () => {
@@ -26,25 +27,27 @@ const HomePage: React.FC = () => {
   return (
     <CTLayoutDashboard
       className="home_page"
-      meta={kHomePageMeta}
+      meta={ctPageMeta}
       backgroundVideo={<ProfileBackgroundVideo />}
       {...(!isDesktop ? { titlePage: 'PROFILE' } : {})}>
       <Row className="mb--4" {...rowProps}>
         <Col {...leftColProps}>
-          {isXsMobile ? (
-            <>
-              <CTTitle title="Ivan Susanto" />
-              <Carousel infinite={false} arrows draggable adaptiveHeight>
+          <section>
+            {isXsMobile ? (
+              <>
+                <CTTitle title="Ivan Susanto" />
+                <Carousel infinite={false} arrows draggable adaptiveHeight>
+                  <ProfileBioDesc />
+                  <ProfileStatus />
+                </Carousel>
+              </>
+            ) : (
+              <>
+                <CTTitle title="Ivan Susanto" />
                 <ProfileBioDesc />
-                <ProfileStatus />
-              </Carousel>
-            </>
-          ) : (
-            <div>
-              <CTTitle title="Ivan Susanto" />
-              <ProfileBioDesc />
-            </div>
-          )}
+              </>
+            )}
+          </section>
         </Col>
         <Col {...middleColProps} />
         <Col {...rightColProps} />

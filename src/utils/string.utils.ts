@@ -27,3 +27,7 @@ export const formatEllipsis: (
 
   return `${fullTextStr?.substr(0, maxChar)}...`;
 };
+
+export const getAssetSrc: (path: string) => string = (path) => {
+  return new URL(path, import.meta.url)?.href;
+};

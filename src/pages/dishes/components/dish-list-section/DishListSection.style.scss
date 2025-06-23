@@ -1,0 +1,48 @@
+@use '@/styles/scss/utils/margin';
+@use '@/styles/scss/utils/padding';
+@use '@/styles/scss/variables/colors' as kColor;
+
+$height: 65dvh;
+
+.dish_list_section {
+  .ct-container {
+    height: $height;
+  }
+  .dish_list_scrollable {
+    height: calc($height - 12dvh);
+    overflow: scroll;
+  }
+  @media only screen and (max-width: 575px) {
+    .ct-container {
+      height: calc($height - 24dvh);
+      margin-bottom: 1rem;
+    }
+    .dish_list_scrollable {
+      height: calc($height - 36dvh);
+      overflow: scroll;
+    }
+  }
+  .dish_list_container {
+    border-bottom: 1.5px solid kColor.$kColorNeutral--1;
+    cursor: pointer;
+
+    @extend .mb--1;
+    @extend .pb--1;
+
+    &:hover,
+    &.--selected {
+      color: kColor.$kColorPrimary--main;
+    }
+    &.--selected {
+      font-weight: bold;
+    }
+  }
+
+  .dish_wrapper {
+    cursor: pointer;
+  }
+
+  .dish_name {
+    font-size: 1rem;
+  }
+}
