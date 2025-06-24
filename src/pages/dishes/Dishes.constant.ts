@@ -40,7 +40,7 @@ export const dishList: DishList = [
   },
   { title: 'Assorted Charcuterie', imageUrl: ['Assorted Charcuterie_.jpg'] },
   { title: 'Assorted Fruits', imageUrl: ['Assorted fruits.jpg'] },
-  { title: 'Insalata Frute de Mare', imageUrl: ['Assorted fruits.jpg'] },
+  { title: 'Insalata Frute de Mare', imageUrl: ['Insalata Frute de Mare.jpg'] },
   { title: 'Crudite', imageUrl: ['Crudite.jpg'] },
   { title: 'Miso Black Cod', imageUrl: ['Miso black cod.jpg'] },
   { title: 'Yasai Udon', imageUrl: ['Yasai udon.jpg'] },
@@ -72,7 +72,7 @@ export const dishList: DishList = [
   { title: 'Nigiri Moriawase', imageUrl: ['Nigiri Moriawase.jpg'] },
   { title: 'California Ebi Maki', imageUrl: ['California- Ebi Maki.jpg'] },
   {
-    title: 'Sumber Corn Salad Canape',
+    title: 'Summer Corn Salad Canape',
     imageUrl: ['Sumber corn salad canape.jpg'],
   },
   { title: 'Ceviche Platter', imageUrl: ['Ceviche platter.jpg'] },
