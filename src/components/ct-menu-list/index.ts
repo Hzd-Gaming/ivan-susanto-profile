@@ -1,4 +1,4 @@
-import CTMenuList from './CTMenuList.component';
-import type { CTMenuListProps } from './CTMenuList.types';
+import CTMenuList from './component';
+import type { CTMenuListProps } from './types';
 
 export { CTMenuList, CTMenuListProps };

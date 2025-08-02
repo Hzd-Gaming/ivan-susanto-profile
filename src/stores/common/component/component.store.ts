@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { kStorageKey } from '@/constants/common';
+import { ctStorageKey } from '@/constants/common';
 
 import { UseComponentStoreProps } from './component.type';
 
@@ -20,7 +20,7 @@ const useComponentStore = create<UseComponentStoreProps>((set) => ({
   },
   updateIsBackgroundMusicMuted: (value) => {
     set((state) => {
-      localStorage.setItem(kStorageKey.DarkMode, value?.toString());
+      localStorage.setItem(ctStorageKey.DarkMode, value?.toString());
       return { ...state, isBackgroundMusicMuted: value };
     });
   },

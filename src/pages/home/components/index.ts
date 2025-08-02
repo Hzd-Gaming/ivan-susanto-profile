@@ -1,3 +1,4 @@
-export * from './profile-background-video';
-export * from './profile-bio-desc';
+import ProfileBioDesc from './ProfileBioDesc';
+export { ProfileBioDesc };
+
 export * from './profile-status';

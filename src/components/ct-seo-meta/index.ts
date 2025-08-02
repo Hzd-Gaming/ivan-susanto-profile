@@ -1,4 +1,4 @@
-import CTSeoMeta from './CTSeoMeta.component';
-import type { CTSeoMetaProps } from './CTSeoMeta.type';
+import CTSeoMeta from './component';
+import type { CTSeoMetaProps } from './type';
 
 export { CTSeoMeta, type CTSeoMetaProps };

@@ -4,3 +4,4 @@ export * from './ct-error-boundary';
 export * from './ct-overflow-text';
 export * from './ct-seo-meta';
 export * from './ct-title';
+export * from './profile-background-video';

@@ -1,4 +1,4 @@
-import CTErrorBoundary from './CTErrorBoundary.component';
-import type { CTErrorBoundaryProps } from './CTErrorBoundary.type';
+import CTErrorBoundary from './component';
+import type { CTErrorBoundaryProps } from './type';
 
 export { CTErrorBoundary, CTErrorBoundaryProps };

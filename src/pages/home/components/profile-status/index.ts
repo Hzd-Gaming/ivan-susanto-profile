@@ -1,3 +1,3 @@
-import ProfileStatus from './ProfileStatus';
+import ProfileStatus from './component';
 
 export { ProfileStatus };
