@@ -30,7 +30,7 @@ $menu_list_color_type2_2: kColor.$kColorPrimary--2;
 
     &__outer {
       width: 100%;
-      padding: 0.5rem 1.625rem;
+      padding: 0.5rem 0.625rem;
       background-color: kColor.$kColorNeutral--3;
       border-bottom: thin solid kColor.$kColorNeutral--5;
       opacity: $menu_list_opacity;
@@ -50,28 +50,7 @@ $menu_list_color_type2_2: kColor.$kColorPrimary--2;
       background-color: $menu_list_color_type1;
       opacity: $menu_list_opacity;
       font-size: 1rem;
-
-      // triangular on xAxis side
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0px;
-        width: 0px;
-        height: 0px;
-        border-top: 1.125rem solid transparent;
-        border-bottom: 1.125rem solid transparent;
-        opacity: $menu_list_opacity;
-      }
-      &:before {
-        right: 100%;
-        border-right: 18px solid $menu_list_color_type1;
-      }
-      &:after {
-        left: 100%;
-        border-left: 18px solid $menu_list_color_type1;
-      }
-      // end of triangular on xAxis side
+      border-radius: 12px;
 
       // effect on hover menu inside
       .hover_effect {

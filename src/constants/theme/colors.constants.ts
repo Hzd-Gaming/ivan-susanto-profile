@@ -9,30 +9,30 @@
 /**
  * ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp)
  * ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp)
- * ![#4d78df](https://placehold.co/2x2/4d78df/4d78df.webp)
- * ![#223da8](https://placehold.co/2x2/223da8/223da8.webp)
+ * ![#93da97](https://placehold.co/2x2/93da97/93da97.webp)
+ * ![#5e936c](https://placehold.co/2x2/5e936c/5e936c.webp)
  * ![#4d5f97](https://placehold.co/2x2/4d5f97/4d5f97.webp)
- * ![#424a5d](https://placehold.co/2x2/424a5d/424a5d.webp)
+ * ![#3e5f44](https://placehold.co/2x2/3e5f44/3e5f44.webp)
  * ![#29396a](https://placehold.co/2x2/29396a/29396a.webp)
- * ![#151c30](https://placehold.co/2x2/151c30/151c30.webp)
+ * ![#17313e](https://placehold.co/2x2/17313e/17313e.webp)
  */
 export const kColorPrimary = {
   /** ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp) */
   main: '#10eac6',
   /** ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp) */
   '0': '#60a2d4',
-  /** ![#4d78df](https://placehold.co/2x2/4d78df/4d78df.webp) */
-  '1': '#4d78df',
-  /** ![#223da8](https://placehold.co/2x2/223da8/223da8.webp) */
-  '2': '#223da8',
+  /** ![#93da97](https://placehold.co/2x2/93da97/93da97.webp) */
+  '1': '#93da97',
+  /** ![#5e936c](https://placehold.co/2x2/5e936c/5e936c.webp) */
+  '2': '#5e936c',
   /** ![#4d5f97](https://placehold.co/2x2/4d5f97/4d5f97.webp) */
   '3': '#4d5f97',
-  /** ![#424a5d](https://placehold.co/2x2/424a5d/424a5d.webp) */
-  '4': '#424a5d',
+  /** ![#3e5f44](https://placehold.co/2x2/3e5f44/3e5f44.webp) */
+  '4': '#3e5f44',
   /** ![#29396a](https://placehold.co/2x2/29396a/29396a.webp) */
   '5': '#29396a',
-  /** ![#151c30](https://placehold.co/2x2/151c30/151c30.webp) */
-  '6': '#151c30',
+  /** ![#17313e](https://placehold.co/2x2/17313e/17313e.webp) */
+  '6': '#17313e',
 } as const;
 
 /**

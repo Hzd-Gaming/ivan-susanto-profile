@@ -4,8 +4,8 @@ import type { CTSeoMetaProps } from './CTSeoMeta.type';
 
 const CTSeoMeta: React.FC<CTSeoMetaProps> = ({ meta }) => {
   const {
-    titlePage = 'Custom Title',
-    descriptionPage = 'Custom Template for React and written with TypeScript.',
+    titlePage = 'Ivan Susanto Profile',
+    descriptionPage = 'Chef profile of Ivan Susanto with fancy dishes preview and professional experiences',
   } = meta || {};
 
   return (
