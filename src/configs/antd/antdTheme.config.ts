@@ -22,10 +22,10 @@ export const antdTheme: ThemeConfig = {
     },
   },
   token: {
+    fontFamily: 'Comic Relief, sans-serif',
     borderRadius: 8,
     colorLink: kColorPrimary.main,
     colorPrimary: kColorPrimary.main,
     colorText: kColorNeutral.main,
-    fontFamily: 'inherit',
   },
 };
