@@ -36,7 +36,7 @@ export const antdTheme: ThemeConfig = {
     fontFamily: 'Comic Relief, sans-serif',
     borderRadius: 8,
     colorLink: ctColorPrimary.main,
-    colorPrimary: ctColorPrimary[1],
+    colorPrimary: ctColorPrimary.main,
     colorText: ctColorNeutral.main,
   },
 };
