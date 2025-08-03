@@ -18,7 +18,7 @@
  */
 export const ctColorPrimary = {
   /** ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp) */
-  main: '#10eac6',
+  main: '#3E5F44',
   /** ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp) */
   '0': '#60a2d4',
   /** ![#93da97](https://placehold.co/2x2/93da97/93da97.webp) */
