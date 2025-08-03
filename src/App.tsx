@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { RouterProvider } from 'react-router-dom';
 
 import BackgroundMusic from '@/assets/audios/background-music.mp3';
-import { antdTheme } from '@/configs/antd/antdTheme.config';
+import { antdTheme } from '@/configs/antd';
 import { router } from '@/routes';
 
 import { useComponentStore } from './stores/common';

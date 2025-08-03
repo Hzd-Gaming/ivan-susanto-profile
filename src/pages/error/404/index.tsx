@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 
-const Error404Page = lazy(() => import('./404.page'));
+const Error404Page = lazy(() => import('./page'));
 
 export const Error404 = () => {
   return (

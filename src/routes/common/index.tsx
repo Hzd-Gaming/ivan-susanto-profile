@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 
-import { RouteEndpointsCommon } from '@/constants/route-endpoint';
+import { RouteEndpointsCommon } from '@/constants/route-endpoint/common';
 import { Dishes } from '@/pages/dishes';
 import { Error404 } from '@/pages/error/404';
 import { Experiences } from '@/pages/experiences';

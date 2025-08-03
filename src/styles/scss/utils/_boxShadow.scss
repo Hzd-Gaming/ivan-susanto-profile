@@ -12,9 +12,9 @@
 // Or you can use it on `className` like tailwind, just import it
 // on JSX/TSX file and use it.
 
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
-$default_shadow_color: kColor.$kColorNeutral--4;
+$default_shadow_color: ctColor.$ctColorNeutral--4;
 $default_shadow_opacity: 0.075;
 
 .shadow {

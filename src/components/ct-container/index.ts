@@ -1,4 +1,4 @@
-import CTContainer from './CTContainer.component';
-import type { CTContainerProps } from './CTContainer.type';
+import CTContainer from './component';
+import type { CTContainerProps } from './type';
 
 export { CTContainer, type CTContainerProps };

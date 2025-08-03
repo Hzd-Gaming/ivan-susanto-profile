@@ -1,4 +1,4 @@
-import DishImageSection from './DishImageSection';
-import type { DishImageSectionProps } from './DishImageSection.type';
+import DishImageSection from './component';
+import type { DishImageSectionProps } from './type';
 
 export { DishImageSection, type DishImageSectionProps };

@@ -1,2 +1,2 @@
-export * from './storage.constant';
-export * from './options.constant';
+export * from './storage';
+export * from './options';

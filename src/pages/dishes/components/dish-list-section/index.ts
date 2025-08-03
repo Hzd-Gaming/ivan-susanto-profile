@@ -1,4 +1,4 @@
-import DishListSection from './DishListSection';
-import type { DishListSectionProps } from './DishListSection.type';
+import DishListSection from './component';
+import type { DishListSectionProps } from './type';
 
 export { DishListSection, type DishListSectionProps };

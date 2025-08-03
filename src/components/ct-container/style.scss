@@ -1,0 +1,98 @@
+@use '@/styles/scss/utils/padding';
+@use '@/styles/scss/variables/colors' as ctColor;
+@use '@/styles/scss/utils/borderRadius';
+
+$opacity: 80%;
+
+.ct-container {
+  opacity: $opacity;
+
+  @extend .py--2;
+  @extend .px--4;
+  @extend .radius--1;
+
+  @media only screen and (width < 958px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  // Background based on theme
+  &__blue {
+    background-image: linear-gradient(
+      ctColor.$ctColorNeutral--4,
+      ctColor.$ctColorPrimary--2
+    );
+
+    :where(.title__text) {
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: normal;
+    }
+
+    :where(.title__border_bottom) {
+      position: relative;
+      padding: 0.5px;
+      background-color: ctColor.$ctColorNeutral--main;
+
+      @media only screen and (width < 958px) {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      // triangular on xAxis side
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: -1.5px;
+        width: 0px;
+        height: 0px;
+        border-top: 0.125rem solid transparent;
+        border-bottom: 0.125rem solid transparent;
+        opacity: $opacity;
+      }
+      &:before {
+        right: 100%;
+        border-right: 18px solid ctColor.$ctColorNeutral--main;
+      }
+      &:after {
+        left: 100%;
+        border-left: 18px solid ctColor.$ctColorNeutral--main;
+      }
+      // end of triangular on xAxis side
+    }
+  }
+
+  &__black {
+    background-image: linear-gradient(
+      0.25turn,
+      ctColor.$ctColorNeutral--4,
+      ctColor.$ctColorNeutral--5,
+      ctColor.$ctColorNeutral--4
+    );
+
+    :where(.title__border_top),
+    :where(.title__border_bottom) {
+      padding: 1px;
+      background-color: ctColor.$ctColorDanger--0;
+    }
+    :where(.title__border_bottom) {
+      margin-bottom: 1rem;
+    }
+    :where(.title__text) {
+      color: ctColor.$ctColorDanger--0;
+      text-align: center;
+      background-image: linear-gradient(
+        0.25turn,
+        ctColor.$ctColorNeutral--4,
+        ctColor.$ctColorDanger--2,
+        ctColor.$ctColorNeutral--4
+      );
+    }
+  }
+  // end of region Background based on theme
+
+  :where(.children) {
+    text-align: justify;
+  }
+}

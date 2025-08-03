@@ -1,0 +1,21 @@
+@use '@/styles/scss/variables/colors' as ctColor;
+
+.error_404_page {
+  min-height: 100dvh;
+  display: flex;
+  background-color: ctColor.$ctColorBackground--dashboard;
+
+  &--dark {
+    background-color: ctColor.$ctColorNeutral--5;
+  }
+  &__illust {
+    margin: auto;
+
+    &--dark {
+      :where(.ant-result-title),
+      :where(.ant-result-subtitle) {
+        color: ctColor.$ctColorNeutral--1 !important;
+      }
+    }
+  }
+}

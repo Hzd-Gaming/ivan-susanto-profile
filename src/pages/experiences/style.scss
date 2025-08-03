@@ -1,0 +1,29 @@
+@use '@/styles/scss/variables/colors' as ctColor;
+
+.experiences_page {
+  .ct-container {
+    padding-top: 40px;
+    max-height: 60dvh;
+    overflow-y: scroll;
+
+    .item_container {
+      cursor: pointer;
+      border: solid 1px white;
+      border-start-end-radius: 100px;
+      border-end-end-radius: 100px;
+      padding: 12px;
+      padding-right: 30px;
+      background-color: ctColor.$ctColorNeutral--4;
+
+      .title_container {
+        color: ctColor.$ctColorPrimary--main;
+        font-weight: 600;
+        border-bottom: solid 1px white;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
