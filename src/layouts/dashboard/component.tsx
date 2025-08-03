@@ -36,7 +36,7 @@ const CTLayoutDashboardComponent: React.FC<CTLayoutDashboardProps> = ({
         if (splittedPathname?.[splittedPathname.length - 1] === '') {
           splittedPathname.pop();
         }
-        const trimmedPathname = splittedPathname?.join('/');
+        const trimmedPathname = splittedPathname?.join('/') || '/';
         return el?.key !== trimmedPathname;
       }),
     [location]

@@ -21,7 +21,7 @@ export default ({ mode }: { mode: string }) => {
     optimizeDeps: {
       include: ['antd', 'react-router'],
     },
-    base: '/ivan-susanto-profile',
+    base: '/',
     plugins: [
       react(),
       svgr({
