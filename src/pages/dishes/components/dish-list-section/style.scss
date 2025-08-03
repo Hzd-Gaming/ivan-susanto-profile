@@ -1,6 +1,6 @@
 @use '@/styles/scss/utils/margin';
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
 $height: 65dvh;
 
@@ -23,7 +23,7 @@ $height: 65dvh;
     }
   }
   .dish_list_container {
-    border-bottom: 1.5px solid kColor.$kColorNeutral--1;
+    border-bottom: 1.5px solid ctColor.$ctColorNeutral--1;
     cursor: pointer;
 
     @extend .mb--1;
@@ -31,7 +31,7 @@ $height: 65dvh;
 
     &:hover,
     &.--selected {
-      color: kColor.$kColorPrimary--main;
+      color: ctColor.$ctColorPrimary--main;
     }
     &.--selected {
       font-weight: bold;

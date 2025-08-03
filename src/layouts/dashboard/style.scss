@@ -1,9 +1,9 @@
 @use '@/styles/scss/utils/margin';
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
 .ct_layout_dashboard {
-  background-color: kColor.$kColorBackground--dashboard;
+  background-color: ctColor.$ctColorBackground--dashboard;
   &__inner {
     &__background_video {
       position: absolute;

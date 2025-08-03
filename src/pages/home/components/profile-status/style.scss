@@ -1,14 +1,14 @@
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
 .profile_stat {
   &__desc {
     &__job_value {
       font-size: 1rem;
-      color: kColor.$kColorDanger--0;
+      color: ctColor.$ctColorDanger--0;
     }
 
     &__col_left_container {
-      border-right: 0.125rem solid kColor.$kColorNeutral--2;
+      border-right: 0.125rem solid ctColor.$ctColorNeutral--2;
     }
 
     &__scrollable_value_container {
@@ -26,7 +26,7 @@
     }
 
     &__scrollable_value {
-      color: kColor.$kColorPrimary--main;
+      color: ctColor.$ctColorPrimary--main;
     }
   }
 }

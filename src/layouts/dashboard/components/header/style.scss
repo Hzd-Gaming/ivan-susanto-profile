@@ -1,7 +1,7 @@
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
-$header_sidebar_color: kColor.$kColorPrimary--6;
+$header_sidebar_color: ctColor.$ctColorPrimary--6;
 
 .ct_layout_dashboard__header {
   top: 0;
@@ -18,8 +18,8 @@ $header_sidebar_color: kColor.$kColorPrimary--6;
     background-image: linear-gradient(
       0.25turn,
       $header_sidebar_color,
-      kColor.$kColorPrimary--5,
-      kColor.$kColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
       $header_sidebar_color
     );
   }
@@ -29,7 +29,7 @@ $header_sidebar_color: kColor.$kColorPrimary--6;
   }
 
   &__title {
-    color: kColor.$kColorDanger--0;
+    color: ctColor.$ctColorDanger--0;
     font-size: 2dvh;
   }
 

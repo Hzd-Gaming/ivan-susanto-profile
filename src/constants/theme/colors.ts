@@ -16,7 +16,7 @@
  * ![#29396a](https://placehold.co/2x2/29396a/29396a.webp)
  * ![#17313e](https://placehold.co/2x2/17313e/17313e.webp)
  */
-export const kColorPrimary = {
+export const ctColorPrimary = {
   /** ![#10eac6](https://placehold.co/2x2/a294f9/a294f9.webp) */
   main: '#10eac6',
   /** ![#60a2d4](https://placehold.co/2x2/60a2d4/60a2d4.webp) */
@@ -44,7 +44,7 @@ export const kColorPrimary = {
  * ![#bc836f](https://placehold.co/2x2/bc836f/bc836f.webp)
  * ![#786a5f](https://placehold.co/2x2/786a5f/786a5f.webp)
  */
-export const kColorDanger = {
+export const ctColorDanger = {
   /** ![#ef1313](https://placehold.co/2x2/ef1313/ef1313.webp) */
   main: '#ef1313',
   /** ![#f4db35](https://placehold.co/2x2/f4db35/f4db35.webp) */
@@ -70,7 +70,7 @@ export const kColorDanger = {
  * ![#272a2f](https://placehold.co/2x2/272a2f/272a2f.webp)
  * ![#141518](https://placehold.co/2x2/141518/141518.webp)
  */
-export const kColorNeutral = {
+export const ctColorNeutral = {
   /** ![#fdfdfb](https://placehold.co/2x2/fdfdfb/fdfdfb.webp) */
   main: '#fdfdfb',
   /** ![#FFFFFF](https://placehold.co/2x2/FFFFFF/FFFFFF.webp) */
@@ -90,7 +90,7 @@ export const kColorNeutral = {
 /**
  * ![#F4F6FA](https://placehold.co/2x2/F4F6FA/F4F6FA.webp)
  */
-export const kColorBackground = {
+export const ctColorBackground = {
   /** ![#F4F6FA](https://placehold.co/2x2/F4F6FA/F4F6FA.webp) */
   dashboard: '#F4F6FA',
 } as const;

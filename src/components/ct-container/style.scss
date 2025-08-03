@@ -1,5 +1,5 @@
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 @use '@/styles/scss/utils/borderRadius';
 
 $opacity: 80%;
@@ -19,8 +19,8 @@ $opacity: 80%;
   // Background based on theme
   &__blue {
     background-image: linear-gradient(
-      kColor.$kColorNeutral--4,
-      kColor.$kColorPrimary--2
+      ctColor.$ctColorNeutral--4,
+      ctColor.$ctColorPrimary--2
     );
 
     :where(.title__text) {
@@ -32,7 +32,7 @@ $opacity: 80%;
     :where(.title__border_bottom) {
       position: relative;
       padding: 0.5px;
-      background-color: kColor.$kColorNeutral--main;
+      background-color: ctColor.$ctColorNeutral--main;
 
       @media only screen and (width < 958px) {
         margin-left: 16px;
@@ -53,11 +53,11 @@ $opacity: 80%;
       }
       &:before {
         right: 100%;
-        border-right: 18px solid kColor.$kColorNeutral--main;
+        border-right: 18px solid ctColor.$ctColorNeutral--main;
       }
       &:after {
         left: 100%;
-        border-left: 18px solid kColor.$kColorNeutral--main;
+        border-left: 18px solid ctColor.$ctColorNeutral--main;
       }
       // end of triangular on xAxis side
     }
@@ -66,27 +66,27 @@ $opacity: 80%;
   &__black {
     background-image: linear-gradient(
       0.25turn,
-      kColor.$kColorNeutral--4,
-      kColor.$kColorNeutral--5,
-      kColor.$kColorNeutral--4
+      ctColor.$ctColorNeutral--4,
+      ctColor.$ctColorNeutral--5,
+      ctColor.$ctColorNeutral--4
     );
 
     :where(.title__border_top),
     :where(.title__border_bottom) {
       padding: 1px;
-      background-color: kColor.$kColorDanger--0;
+      background-color: ctColor.$ctColorDanger--0;
     }
     :where(.title__border_bottom) {
       margin-bottom: 1rem;
     }
     :where(.title__text) {
-      color: kColor.$kColorDanger--0;
+      color: ctColor.$ctColorDanger--0;
       text-align: center;
       background-image: linear-gradient(
         0.25turn,
-        kColor.$kColorNeutral--4,
-        kColor.$kColorDanger--2,
-        kColor.$kColorNeutral--4
+        ctColor.$ctColorNeutral--4,
+        ctColor.$ctColorDanger--2,
+        ctColor.$ctColorNeutral--4
       );
     }
   }

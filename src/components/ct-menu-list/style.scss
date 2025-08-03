@@ -1,11 +1,11 @@
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 @use '@/styles/scss/utils/borderRadius';
 
-$menu_list_color_type1: kColor.$kColorPrimary--6;
+$menu_list_color_type1: ctColor.$ctColorPrimary--6;
 $menu_list_opacity: 93%;
-$menu_list_color_type2_1: kColor.$kColorNeutral--4;
-$menu_list_color_type2_2: kColor.$kColorPrimary--2;
+$menu_list_color_type2_1: ctColor.$ctColorNeutral--4;
+$menu_list_color_type2_2: ctColor.$ctColorPrimary--2;
 
 .ct_menu_list {
   @extend .radius--5;
@@ -14,15 +14,15 @@ $menu_list_color_type2_2: kColor.$kColorPrimary--2;
     background-image: linear-gradient(
       0.25turn,
       $menu_list_color_type1 10%,
-      kColor.$kColorPrimary--4,
-      kColor.$kColorPrimary--4,
+      ctColor.$ctColorPrimary--4,
+      ctColor.$ctColorPrimary--4,
       $menu_list_color_type1,
       $menu_list_color_type1
     );
     opacity: $menu_list_opacity;
 
     &__title {
-      color: kColor.$kColorDanger--0;
+      color: ctColor.$ctColorDanger--0;
     }
   }
   &__menu_wrapper {
@@ -31,8 +31,8 @@ $menu_list_color_type2_2: kColor.$kColorPrimary--2;
     &__outer {
       width: 100%;
       padding: 0.5rem 0.625rem;
-      background-color: kColor.$kColorNeutral--3;
-      border-bottom: thin solid kColor.$kColorNeutral--5;
+      background-color: ctColor.$ctColorNeutral--3;
+      border-bottom: thin solid ctColor.$ctColorNeutral--5;
       opacity: $menu_list_opacity;
     }
     &:last-child {
@@ -63,10 +63,10 @@ $menu_list_color_type2_2: kColor.$kColorPrimary--2;
         height: 6px;
         background-image: radial-gradient(
           closest-side at 15% 25%,
-          kColor.$kColorNeutral--main,
-          kColor.$kColorPrimary--0,
-          kColor.$kColorPrimary--2,
-          kColor.$kColorPrimary--6
+          ctColor.$ctColorNeutral--main,
+          ctColor.$ctColorPrimary--0,
+          ctColor.$ctColorPrimary--2,
+          ctColor.$ctColorPrimary--6
         );
         padding: 3px;
         padding-top: 5px;

@@ -1,4 +1,4 @@
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
 $opacity: 90%;
 
@@ -16,14 +16,14 @@ $opacity: 90%;
     width: 100%;
     background-image: linear-gradient(
       0.25turn,
-      kColor.$kColorNeutral--4,
-      kColor.$kColorNeutral--5
+      ctColor.$ctColorNeutral--4,
+      ctColor.$ctColorNeutral--5
     );
     opacity: $opacity;
     font-size: 1rem;
 
     .text {
-      color: kColor.$kColorDanger--0;
+      color: ctColor.$ctColorDanger--0;
     }
 
     // triangular on xAxis side
@@ -40,11 +40,11 @@ $opacity: 90%;
     }
     &:before {
       right: 100%;
-      border-right: 18px solid kColor.$kColorNeutral--4;
+      border-right: 18px solid ctColor.$ctColorNeutral--4;
     }
     &:after {
       left: 100%;
-      border-left: 18px solid kColor.$kColorNeutral--5;
+      border-left: 18px solid ctColor.$ctColorNeutral--5;
     }
     // end of triangular on xAxis side
   }

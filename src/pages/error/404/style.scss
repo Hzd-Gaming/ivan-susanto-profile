@@ -1,12 +1,12 @@
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
 .error_404_page {
   min-height: 100dvh;
   display: flex;
-  background-color: kColor.$kColorBackground--dashboard;
+  background-color: ctColor.$ctColorBackground--dashboard;
 
   &--dark {
-    background-color: kColor.$kColorNeutral--5;
+    background-color: ctColor.$ctColorNeutral--5;
   }
   &__illust {
     margin: auto;
@@ -14,7 +14,7 @@
     &--dark {
       :where(.ant-result-title),
       :where(.ant-result-subtitle) {
-        color: kColor.$kColorNeutral--1 !important;
+        color: ctColor.$ctColorNeutral--1 !important;
       }
     }
   }

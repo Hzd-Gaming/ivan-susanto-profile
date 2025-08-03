@@ -1,11 +1,11 @@
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 @use '@/styles/scss/utils/margin';
 @use '@/styles/scss/utils/padding';
 @use '@/styles/scss/utils/borderRadius';
 
 .ct_error_boundary {
-  background-color: kColor.$kColorDanger--2;
-  border: 1px solid kColor.$kColorDanger--5;
+  background-color: ctColor.$ctColorDanger--2;
+  border: 1px solid ctColor.$ctColorDanger--5;
   @extend .p--4;
   @extend .m--2;
   @extend .radius--1;
@@ -14,7 +14,7 @@
   &__details,
   &__error-text,
   &__error-stack {
-    color: kColor.$kColorDanger--5;
+    color: ctColor.$ctColorDanger--5;
   }
 
   &__details {

@@ -6,15 +6,15 @@ import '@/styles/scss/utils/_padding.scss';
 import './style.scss';
 import './components/header/style.scss';
 
-import { kColorNeutral, kColorPrimary } from '@/constants/theme';
+import { ctColorNeutral, ctColorPrimary } from '@/constants/theme';
 
 const CTLayoutDashboardLoader: React.FC = () => {
   return (
     <Row
       justify="center"
       align="middle"
-      style={{ backgroundColor: kColorNeutral[5], minHeight: '100dvh' }}>
-      <LoadingOutlined style={{ color: kColorPrimary[0], fontSize: 36 }} />
+      style={{ backgroundColor: ctColorNeutral[5], minHeight: '100dvh' }}>
+      <LoadingOutlined style={{ color: ctColorPrimary[0], fontSize: 36 }} />
     </Row>
   );
 };

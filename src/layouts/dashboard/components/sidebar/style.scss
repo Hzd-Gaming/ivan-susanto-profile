@@ -1,23 +1,23 @@
 @use '@/styles/scss/utils/padding';
-@use '@/styles/scss/variables/colors' as kColor;
+@use '@/styles/scss/variables/colors' as ctColor;
 
-$header_sidebar_color: kColor.$kColorPrimary--6;
+$header_sidebar_color: ctColor.$ctColorPrimary--6;
 
 .ct_layout_dashboard__sidebar {
   :where(.anticon-close) {
-    color: kColor.$kColorDanger--1;
+    color: ctColor.$ctColorDanger--1;
   }
   :where(.ant-drawer-header) {
     background-image: linear-gradient(
       0.25turn,
       $header_sidebar_color,
-      kColor.$kColorPrimary--5,
-      kColor.$kColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
       $header_sidebar_color
     );
     padding: 0.9375rem 2.5rem !important;
     z-index: 1000;
-    color: kColor.$kColorDanger--0;
+    color: ctColor.$ctColorDanger--0;
   }
   :where(.ant-drawer-body) {
     padding: 0px !important;
@@ -26,12 +26,12 @@ $header_sidebar_color: kColor.$kColorPrimary--6;
     background-image: linear-gradient(
       0.25turn,
       $header_sidebar_color,
-      kColor.$kColorPrimary--5,
-      kColor.$kColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
+      ctColor.$ctColorPrimary--5,
       $header_sidebar_color
     );
     :where(.ant-collapse-header) {
-      background-color: kColor.$kColorPrimary--0;
+      background-color: ctColor.$ctColorPrimary--0;
       :where(.ant-collapse-header-text) {
         font-weight: bold;
       }
