@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
+import ThumbnailSrc from '@/assets/images/profile-background-fallback.webp';
 import BackgroundProfileVideoSrc from '@/assets/videos/profile-background-compressed.mp4';
+
 import './style.scss';
 
 const ProfileBackgroundVideo: React.FC = () => {
@@ -27,7 +29,8 @@ const ProfileBackgroundVideo: React.FC = () => {
       className="profile-background-video"
       autoPlay
       muted
-      loop>
+      loop
+      poster={ThumbnailSrc}>
       <source src={BackgroundProfileVideoSrc} />
     </video>
   );
