@@ -18,7 +18,7 @@ const DishImageSection: React.FC<DishImageSectionProps> = ({
 
   const dynamicImages = useMemo(() => {
     const generateImgUrl = (imgName: string) => {
-      return `/ivan-susanto-profile/images/${imgName}`;
+      return `/images/${imgName}`;
     };
 
     const placeholder = (
