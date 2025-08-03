@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { Carousel, Image } from 'antd';
+import { Carousel, Image, Spin } from 'antd';
 import { useMediaQuery } from 'usehooks-ts';
 
 import { CTContainer } from '@/components';
@@ -16,36 +16,55 @@ const DishImageSection: React.FC<DishImageSectionProps> = ({
   const isDesktop = useMediaQuery('(min-width: 768px)');
   const imageHeight = useMemo(() => (isDesktop ? 400 : 200), [isDesktop]);
 
+  const dynamicImages = useMemo(() => {
+    const generateImgUrl = (imgName: string) => {
+      return `/ivan-susanto-profile/images/${imgName}`;
+    };
+
+    const placeholder = (
+      <div className="img-placeholder" style={{ height: imageHeight }}>
+        <Spin size="large" />
+        Loading
+      </div>
+    );
+
+    // render carousel if img are more than one
+    if (imageUrl?.length > 1) {
+      return (
+        <Carousel arrows adaptiveHeight autoplay dots={false}>
+          {imageUrl?.map((el) => {
+            const completeUrl = generateImgUrl(el);
+            return (
+              <Image
+                key={el}
+                width="100%"
+                height={imageHeight}
+                src={completeUrl}
+                loading="lazy"
+                placeholder={placeholder}
+              />
+            );
+          })}
+        </Carousel>
+      );
+    }
+
+    // single image
+    return (
+      <Image
+        width="100%"
+        height={imageHeight}
+        src={generateImgUrl(imageUrl?.[0] || '')}
+        loading="lazy"
+        placeholder={placeholder}
+      />
+    );
+  }, [imageUrl, imageHeight]);
+
   return (
     <section className="dish_image_section">
       <CTContainer theme="black" title={imageTitle} style={{ opacity: '100%' }}>
-        {imageUrl?.length > 1 ? (
-          <Carousel arrows adaptiveHeight autoplay dots={false}>
-            {imageUrl?.map((el) => {
-              const completeUrl = new URL(
-                `/src/assets/images/${el}`,
-                import.meta.url
-              )?.href;
-              return (
-                <Image
-                  key={el}
-                  width="100%"
-                  height={imageHeight}
-                  src={completeUrl}
-                />
-              );
-            })}
-          </Carousel>
-        ) : (
-          <Image
-            width="100%"
-            height={imageHeight}
-            src={
-              new URL(`/src/assets/images/${imageUrl?.[0]}`, import.meta.url)
-                ?.href
-            }
-          />
-        )}
+        {dynamicImages}
       </CTContainer>
     </section>
   );

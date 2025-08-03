@@ -1,4 +1,12 @@
 .dish_image_section {
+  .img-placeholder {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
   .ant-image-img {
     object-fit: cover;
   }
