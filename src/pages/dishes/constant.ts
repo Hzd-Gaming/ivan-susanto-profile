@@ -90,4 +90,12 @@ export const dishList: DishList = [
     title: 'Thai Minced Beef Omelette',
     imageUrl: ['Thai Minced Beef Omelette.jpg'],
   },
+  {
+    title: 'New York Cheesecake',
+    imageUrl: ['New York Cheesecake.jpg'],
+  },
+  {
+    title: 'Chana Chaat',
+    imageUrl: ['Chana Chaat.jpg'],
+  },
 ].sort((a, b) => a.title.localeCompare(b.title));
